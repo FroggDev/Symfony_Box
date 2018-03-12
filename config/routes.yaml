@@ -1,0 +1,7 @@
+# redirect default route to login form
+index:
+    path: /
+    controller: Symfony\Bundle\FrameworkBundle\Controller\RedirectController::redirectAction
+    defaults:
+        route: security_connexion
+        permanent: true
