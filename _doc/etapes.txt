@@ -1,0 +1,9 @@
+1] preparation
+
+composer init
+composer create-project symfony/website-skeleton Symfony_Box
+composer require symfony/workflow
+composer require server --dev
+
+
+php bin/console make:entity User

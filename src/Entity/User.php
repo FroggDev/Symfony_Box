@@ -96,17 +96,23 @@ class User implements AdvancedUserInterface
     private $lastConnexion;
 
     /**
-     * Author account state ( 0 = inactive ; 1 = active ; 2 = closed ; 3 = banned ...other state for later )
+     * User account state ( 0 = inactive ; 1 = active ; 2 = closed ; 3 = banned ...other state for later )
      * @ORM\Column(type="integer")
-     * @see Author contants
+     * @see User contants
      */
     private $status;
 
     /**
-     * When Author account is closed or banned
+     * When User account is closed or banned
      * @ORM\Column(type="datetime",nullable=true)
      */
     private $dateClosed;
+
+    /**
+     * User has subscribe to the box
+     * @ORM\Column(type="boolean",nullable=true)
+     */
+    private $hasSubscribe;
 
 
     ###########
@@ -115,11 +121,11 @@ class User implements AdvancedUserInterface
 
 
     /**
-     * Author constructor.
+     * User constructor.
      */
     public function __construct()
     {
-        # initialize date creation on Author creation
+        # initialize date creation on User creation
         $this->dateInscription = new \DateTime();
     }
 
@@ -257,8 +263,9 @@ class User implements AdvancedUserInterface
         $this->roles[] = $role;
         return $this;
     }
+
     /**
-     * @param string $role
+     * @param array $roles
      * @return User
      */
     public function setAllRoles(array $roles): User
@@ -341,7 +348,7 @@ class User implements AdvancedUserInterface
      */
     public function setToken(): User
     {
-        //$author->setToken(bin2hex(random_bytes(100)));
+        //User->setToken(bin2hex(random_bytes(100)));
         $this->token = uniqid('', true) . uniqid('', true);
         #set token validity only if account has been validated
         # case if user didnt validated email, can validate later
@@ -531,6 +538,24 @@ class User implements AdvancedUserInterface
     public function isCredentialsNonExpired() : bool
     {
         return true;
+    }
+
+    /**
+     * @return bool
+     */
+    public function getHasSubscribe()
+    {
+        return $this->hasSubscribe;
+    }
+
+    /**
+     * @param bool $hasSubscribe
+     * @return User
+     */
+    public function setHasSubscribe($hasSubscribe)
+    {
+        $this->hasSubscribe = $hasSubscribe;
+        return $this;
     }
 
 }

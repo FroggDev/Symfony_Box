@@ -1,8 +1,13 @@
 <?php
+
 namespace App\Controller;
 
+use App\Common\Traits\MailerTrait;
 use App\Exception\UndefinedRoleException;
+use App\Form\User\BoxSubscribeType;
+use App\SiteConfig;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -26,13 +31,21 @@ class LoggedController extends Controller
         $user = $this->get('security.token_storage')->getToken()->getUser();
 
         # get route based on role
-        switch (true){
-            case $user->hasRole('ROLE_ADMIN'):      $route = "admin";      break;
-            case $user->hasRole('ROLE_MANAGER'):    $route = "manager";    break;
-            case $user->hasRole('ROLE_MARKETING'):  $route = "marketing";  break;
+        switch (true) {
+            case $user->hasRole('ROLE_ADMIN'):
+                $route = "admin";
+                break;
+            case $user->hasRole('ROLE_MANAGER'):
+                $route = "manager";
+                break;
+            case $user->hasRole('ROLE_MARKETING'):
+                $route = "marketing";
+                break;
             # A VIRER ??
             # case $user->hasRole('ROLE_PROVIDER'):   $route = "provider";   break;
-            case $user->hasRole('ROLE_MEMBER'):     $route = "member";     break;
+            case $user->hasRole('ROLE_MEMBER'):
+                $route = "member";
+                break;
 
             default:
                 throw new UndefinedRoleException();
@@ -50,7 +63,7 @@ class LoggedController extends Controller
      * )
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function indexMarketing() : Response
+    public function indexMarketing(): Response
     {
         # Display index
         return $this->render('user/marketing.html.twig');
@@ -63,7 +76,7 @@ class LoggedController extends Controller
      * )
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function indexProvider() : Response
+    public function indexProvider(): Response
     {
         # Display index
         return $this->render('user/provider.html.twig');
@@ -76,7 +89,7 @@ class LoggedController extends Controller
      * )
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function indexManager() : Response
+    public function indexManager(): Response
     {
         # Display index
         return $this->render('user/manager.html.twig');
@@ -89,12 +102,11 @@ class LoggedController extends Controller
      * )
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function indexMember() : Response
+    public function indexMember(): Response
     {
         # Display index
         return $this->render('user/member.html.twig');
     }
-
 
     /**
      * @Route(
@@ -103,9 +115,10 @@ class LoggedController extends Controller
      * )
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function indexAdmin() : Response
+    public function indexAdmin(): Response
     {
         # Display index
         return $this->render('user/admin.html.twig');
     }
+
 }

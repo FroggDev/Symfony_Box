@@ -1,0 +1,10 @@
+<!--menu-->
+<nav class="menu font-heading">
+    <ul class="hidden-sm hidden-xs">
+        <li {% if active == 'index' %}class="current"{% endif %}><a href="{{ path('index') }}">Home</a></li>
+
+        {% if is_granted('ROLE_MEMBER')%}
+        <li {% if active == 'box_subscribe' %}class="current"{% endif %}><a href="{{ path('box_subscribe') }}">Box Subscription</a></li>
+        {% endif %}
+    </ul>
+</nav>
