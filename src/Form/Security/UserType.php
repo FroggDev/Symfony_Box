@@ -63,7 +63,7 @@ class UserType extends AbstractType
             SubmitType::class,
             [
                 'label' => 'Create account',
-                'attr' => array('class' => 'btn btn-primary')
+                'attr' => array('class' => 'btn btn-block btn-primary')
             ]
         )->getForm();
     }

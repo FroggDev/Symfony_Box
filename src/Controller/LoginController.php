@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Controller;
 
 use App\Common\Traits\MailerTrait;
@@ -29,7 +30,7 @@ class LoginController extends Controller
      */
     public function __construct(\Swift_Mailer $mailer)
     {
-        $this->mailer=$mailer;
+        $this->mailer = $mailer;
     }
 
     /**
@@ -43,6 +44,11 @@ class LoginController extends Controller
      */
     public function connexion(AuthenticationUtils $authenticationUtils)
     {
+        # Check if user is logged in
+        if ($this->container->get('security.authorization_checker')->isGranted('IS_AUTHENTICATED_REMEMBERED')) {
+            return $this->redirectToRoute('index_logged');
+        }
+
         # Récupération du message d'erreur s'il y en a un.
         $error = $authenticationUtils->getLastAuthenticationError();
 
@@ -96,7 +102,7 @@ class LoginController extends Controller
             $eManager->flush();
 
             # send the mail
-            $this->send(SiteConfig::SITEEMAIL, $user->getEmail(), 'mail/registration.html.twig', SiteConfig::SITENAME. ' - Validation mail', $user);
+            $this->send(SiteConfig::SITEEMAIL, $user->getEmail(), 'mail/registration.html.twig', SiteConfig::SITENAME . ' - Validation mail', $user);
 
             # redirect user
             return $this->redirectToRoute('security_connexion', ['register' => 'success']);

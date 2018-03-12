@@ -38,7 +38,7 @@ class UserPasswordType extends AbstractType
             SubmitType::class,
             [
                 'label' => 'Change password',
-                'attr' => array('class' => 'btn btn-primary')
+                'attr' => array('class' => 'btn btn-block btn-primary')
                 ]
         )
         ->getForm();

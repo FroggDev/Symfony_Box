@@ -5,3 +5,7 @@ index:
     defaults:
         route: security_connexion
         permanent: true
+
+#route logout (used in security.yaml)
+security_logout:
+    path: /register/logout.html

@@ -10,17 +10,31 @@ II ] 2eme Etape : Configuration de la base de données
 
 dans le fichier .env à la racine de votre projet
 
-remplacer
+configuration de la base
+------------------------
 
-### doctrine/doctrine-bundle ###
-DATABASE_URL="mysql://db_user:db_password@127.0.0.1:3306/db_name"
+###> doctrine/doctrine-bundle ###
+# Format described at http://docs.doctrine-project.org/projects/doctrine-dbal/en/latest/reference/configuration.html#connecting-using-a-url
+# For an SQLite database, use: "sqlite:///%kernel.project_dir%/var/data.db"
+# Configure your db driver and server_version in config/packages/doctrine.yaml
+DATABASE_URL=mysql://root:root@127.0.0.1:3306/box
+###< doctrine/doctrine-bundle ###
 
-par
+configuration des mails
+-----------------------
 
-### doctrine/doctrine-bundle ###
-DATABASE_URL=mysql://root:@127.0.0.1:3306/technews
+###> symfony/swiftmailer-bundle ###
+# For Gmail as a transport, use: "gmail://username:password@localhost"
+# For a generic SMTP server, use: "smtp://localhost:25?encryption=&auth_mode="
+# Delivery is disabled by default via "null://localhost"
+#MAILER_URL=null://localhost
+MAILER_URL=smtp://smtp.free.fr
+###< symfony/swiftmailer-bundle ###
 
-si vous avez une configuration mysql differente vous pouvez modifier en fonction des besoins
+
+si vous avez une configuration differente vous pouvez modifier en fonction des besoins
+
+
 
 
 III ] 3eme Etape : Creation de la base de données
@@ -38,7 +52,7 @@ IV ] 4eme Etape : Creation de la structure de la base de données
 - dans le project lancer dans une console la commande afin de verifier que tout soit ok
 php bin/console doctrine:schema:validate
 
-- dans le project lancer dans une console la commande afin de creer les operation a effectuer
+- dans le project lancer dans une console la commande afin de creer les operation a effectuer (seulement si modification des entities)
 php bin/console doctrine:migrations:diff
 
 - Puis pour exécuter les requètes de creation de la structure :
@@ -61,6 +75,9 @@ http://127.0.0.1:8000
 
 - pour visualiser les routes vous pouvez utiliser la commande
 php bin/console debug:router
+
+- pour gerer les utilisateurs à partir de la console :
+php bin/console app:userManager
 
 
 /***********************************************************************************************

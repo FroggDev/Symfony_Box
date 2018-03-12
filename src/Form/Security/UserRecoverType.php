@@ -37,7 +37,7 @@ class UserRecoverType extends AbstractType
             SubmitType::class,
             [
                 'label' => 'Recover my password ',
-                'attr' => array('class' => 'btn btn-primary')
+                'attr' => array('class' => 'btn btn-block btn-primary')
                 ]
         )->getForm();
     }

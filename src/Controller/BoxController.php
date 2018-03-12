@@ -17,6 +17,16 @@ class BoxController extends Controller
 {
     use MailerTrait;
 
+
+    /**
+     * BoxController constructor.
+     * @param \Swift_Mailer $mailer
+     */
+    public function __construct(\Swift_Mailer $mailer)
+    {
+        $this->mailer=$mailer;
+    }
+
     /**
      * @Route(
      *     "/box/subscribe.html",
@@ -64,7 +74,7 @@ class BoxController extends Controller
         }
 
         # Display form view
-        return $this->render('security/register.html.twig', [
+        return $this->render('form/boxsubscribe.html.twig', [
             'form' => $form->createView()
         ]);
 

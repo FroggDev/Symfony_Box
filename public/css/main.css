@@ -101,16 +101,17 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: "Roboto Slab", serif; }
 
 /*==========Header=========*/
-.header {
-  padding: 20px 0px; }
+.header { }
   @media screen and (max-width: 767px) {
     .header {
       padding: 5px 0px; } }
   .header a.logo {
     float: left;
-    margin-top: 10px; }
+    margin-top: 10px;
+    margin-left: 10px;
+  }
     .header a.logo img {
-      max-width: 200px; }
+      max-width: 80px; }
 
 .owl-special {
   float: right;
@@ -1572,8 +1573,6 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 /*==========Footer=========*/
 .footer {
-  min-height: 200px;
-  padding: 60px 0px 0px 0px;
   background-color: #333;
   border-top: 5px solid #E53526;
   margin-top: 50px; }
@@ -1639,10 +1638,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
       border: 1px solid #E53526;
       color: #fff; }
 
-.allright {
-  margin-top: 30px;
-  padding: 20px 0px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1); }
+.allright { }
   .allright p {
     margin: 0px;
     line-height: 40px;

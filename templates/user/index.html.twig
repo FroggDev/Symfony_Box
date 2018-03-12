@@ -1,0 +1,30 @@
+{% extends 'layout.html.twig' %}
+
+{% block page_title "Index" %}
+
+{% set active = "index" %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-xs-6 col-xs-push-3">
+    {% if app.request.get('subscribe')=="success" %}
+    <div class="alert alert-success">
+        <p class="text-center"><i class="fa fa-thumbs-up fa-2x" aria-hidden="true"></i></p>
+        <p class="text-center">Congratulation you have successfully subscribed to the SutekinaBox !
+            <br>You will receive the SutekinaBox each month.</p>
+    </div>
+    {% elseif  app.request.get('unsubscribe')=="success" %}
+    <div class="alert alert-success">
+        <p class="text-center"><i class="fa fa-thumbs-up fa-2x" aria-hidden="true"></i></p>
+        <p class="text-center">You have successfully unsubscribed to the SutekinaBox !
+            <br>You will no more receive the SutekinaBox, but you can still subscribe again.</p>
+    </div>
+    {% endif %}
+    </div>
+</div>
+
+    LOGGED !
+
+{% endblock %}
+

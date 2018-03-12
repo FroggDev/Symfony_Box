@@ -2,12 +2,8 @@
 
 namespace App\Controller;
 
-use App\Common\Traits\MailerTrait;
 use App\Exception\UndefinedRoleException;
-use App\Form\User\BoxSubscribeType;
-use App\SiteConfig;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -41,8 +37,9 @@ class LoggedController extends Controller
             case $user->hasRole('ROLE_MARKETING'):
                 $route = "marketing";
                 break;
-            # A VIRER ??
-            # case $user->hasRole('ROLE_PROVIDER'):   $route = "provider";   break;
+            case $user->hasRole('ROLE_PROVIDER'):
+                $route = "provider";
+                break;
             case $user->hasRole('ROLE_MEMBER'):
                 $route = "member";
                 break;
@@ -66,7 +63,7 @@ class LoggedController extends Controller
     public function indexMarketing(): Response
     {
         # Display index
-        return $this->render('user/marketing.html.twig');
+        return $this->render('user/index.html.twig');
     }
 
     /**
@@ -79,7 +76,7 @@ class LoggedController extends Controller
     public function indexProvider(): Response
     {
         # Display index
-        return $this->render('user/provider.html.twig');
+        return $this->render('user/index.html.twig');
     }
 
     /**
@@ -92,7 +89,7 @@ class LoggedController extends Controller
     public function indexManager(): Response
     {
         # Display index
-        return $this->render('user/manager.html.twig');
+        return $this->render('user/index.html.twig');
     }
 
     /**
@@ -105,7 +102,7 @@ class LoggedController extends Controller
     public function indexMember(): Response
     {
         # Display index
-        return $this->render('user/member.html.twig');
+        return $this->render('user/index.html.twig');
     }
 
     /**

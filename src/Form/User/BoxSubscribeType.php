@@ -15,13 +15,11 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
  */
 class BoxSubscribeType extends AbstractType
 {
-
     /**
      * {@inheritdoc}
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-
         $builder->add(
             'hasSubscribe',
             CheckboxType::class,
@@ -34,7 +32,7 @@ class BoxSubscribeType extends AbstractType
             SubmitType::class,
             [
                 'label' => 'Validate',
-                'attr' => array('class' => 'btn btn-primary')
+                'attr' => array('class' => 'btn btn-block btn-primary')
             ]
         )->getForm();
     }
