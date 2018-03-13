@@ -1,0 +1,40 @@
+{% extends"layout.html.twig" %}
+
+{% block page_title "SutekinaBox Creatiion" %}
+
+{% set active = "box_create" %}
+
+{% block content %}
+
+    <div class="row">
+        <div class="col-xs-6 col-xs-push-3">
+            <h2 class="text-center">SutekinaBox Creation</h2>
+            {% form_theme form 'bootstrap_4_horizontal_layout.html.twig' %}
+            {{ form(form) }}
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="{{ asset('lib/dropify/css/dropify.min.css') }}" rel="stylesheet"/>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('lib/dropify/js/dropify.min.js') }}"></script>
+    <script src="{{ asset('lib/dropify/js/dropify.min.js') }}"></script>
+    <script>
+        $('.dropify').dropify({
+            messages: {
+                'default': 'Drag and drop a file here or click',
+                'replace': 'Drag and drop or click to replace',
+                'remove': 'Remove',
+                'error': 'Sorry, an error occured, please retry',
+                'fileSize': 'The file size is too big ({ { value } } max).',
+                'imageFormat': 'The image format is not allowed ({ { value } } only).'
+            }
+        });
+    </script>
+{% endblock %}

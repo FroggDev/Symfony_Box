@@ -7,3 +7,4 @@ composer require server --dev
 
 
 php bin/console make:entity User
+php bin/console make:entity Product

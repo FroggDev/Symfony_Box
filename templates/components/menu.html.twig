@@ -15,9 +15,8 @@
 
         {% if is_granted('IS_AUTHENTICATED_FULLY') %}
 
-
         {% if is_granted('ROLE_MARKETING')%}
-            <!-- TODO -->
+            <li {% if active == 'box_create' %}class="current"{% endif %}><a href="{{ path('box_create') }}">Box Creation</a></li>
         {% elseif is_granted('ROLE_MANAGER') %}
             <!-- TODO -->
         {% elseif is_granted('ROLE_MEMBER') %}

@@ -2,7 +2,9 @@
 
 namespace App\Controller;
 
+use App\Entity\Box;
 use App\Exception\UndefinedRoleException;
+use App\SiteConfig;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -32,13 +34,10 @@ class LoggedController extends Controller
                 $route = "admin";
                 break;
             case $user->hasRole('ROLE_MANAGER'):
-                $route = "manager";
+                $route = "admin";
                 break;
             case $user->hasRole('ROLE_MARKETING'):
-                $route = "marketing";
-                break;
-            case $user->hasRole('ROLE_PROVIDER'):
-                $route = "provider";
+                $route = "admin";
                 break;
             case $user->hasRole('ROLE_MEMBER'):
                 $route = "member";
@@ -51,45 +50,6 @@ class LoggedController extends Controller
 
         # redirect user
         return $this->redirectToRoute("index_" . $route);
-    }
-
-    /**
-     * @Route(
-     *     "/marketing/index.html",
-     *      name="index_marketing"
-     * )
-     * @return \Symfony\Component\HttpFoundation\Response
-     */
-    public function indexMarketing(): Response
-    {
-        # Display index
-        return $this->render('user/index.html.twig');
-    }
-
-    /**
-     * @Route(
-     *     "/provider/index.html",
-     *      name="index_provider"
-     * )
-     * @return \Symfony\Component\HttpFoundation\Response
-     */
-    public function indexProvider(): Response
-    {
-        # Display index
-        return $this->render('user/index.html.twig');
-    }
-
-    /**
-     * @Route(
-     *     "/manager/index.html",
-     *      name="index_manager"
-     * )
-     * @return \Symfony\Component\HttpFoundation\Response
-     */
-    public function indexManager(): Response
-    {
-        # Display index
-        return $this->render('user/index.html.twig');
     }
 
     /**
@@ -108,14 +68,37 @@ class LoggedController extends Controller
     /**
      * @Route(
      *     "/admin/index.html",
-     *      name="index_admin"
+     *      name="index_admin",
+     *      requirements={"currentPage" : "\d+"},
+     *      defaults={"currentPage"="1"},
+     *      methods={"GET"}
      * )
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function indexAdmin(): Response
+    public function indexAdmin(string $currentPage): Response
     {
-        # Display index
-        return $this->render('user/admin.html.twig');
-    }
 
+        # FROM DOCTRINE
+        # get repo category
+        $repositoryBox = $this->getDoctrine()->getRepository(Box::class);
+
+        # get category from category
+        $boxes = $repositoryBox->findAll();
+
+        # get number of elenmts
+        $countBox =count($boxes);
+
+        # get only wanted articles
+        $boxes = array_slice($boxes, ($currentPage-1) * SiteConfig::NBBOXPERPAGE, SiteConfig::NBBOXPERPAGE);
+
+        # number of pagination
+        $countPagination =  ceil($countBox / SiteConfig::NBBOXPERPAGE);
+
+        # display page from twig template
+        return $this->render('user/admin.html.twig', [
+            'boxes' => $boxes,
+            'currentPage' => $currentPage,
+            'countPagination' => $countPagination
+        ]);
+    }
 }

@@ -1,0 +1,19 @@
+{% set status=box.workflowStatus %}
+<div id="workflowContainer">
+    <div id="workflow">
+        <div class="round {% if status=="box_creation" %}selected{% endif %}">Box creation</div>
+        <div class="arrow">></div>
+        <div class="square">Filling the box</div>
+        <div class="arrow">></div>
+        <div class="round {% if status=="products_request" %}selected{% endif %}">Requesting products to provider</div>
+        <div class="arrow">></div>
+        <div class="square">Products availability validation</div>
+        <div class="arrow">></div>
+        <div class="round {% if status=="products_validation" %}selected{% endif %}">Checking products integrity</div>
+        <div class="arrow">></div>
+        <div class="square">Products integrity validation</div>
+        <div class="arrow">></div>
+        <div class="round {% if status=="sent" %}selected{% endif %}">Sent</div>
+    </div>
+</div>
+

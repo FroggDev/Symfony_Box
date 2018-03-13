@@ -1,9 +1,12 @@
 <?php
 namespace App\Controller;
 
+use App\Entity\Box;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Workflow\Exception\LogicException;
+use Symfony\Component\Workflow\Registry;
 
 /**
  * Class IndexController
@@ -11,20 +14,59 @@ use Symfony\Component\Routing\Annotation\Route;
  */
 class IndexController extends Controller
 {
-    /*
+    /**
+     * @Route(
+     *     "/test.html",
+     *      name="test_workflow"
+     * )
+     * @param Registry $workflows
+     */
+    public function edit(Registry $workflows)
+    {/*
+        $post = new Box();
+        $workflow = $workflows->get($post);
 
- * @Route("/",name="index")
- * @return Response
+        // if there are multiple workflows for the same class,
+        // pass the workflow name as the second argument
+        // $workflow = $workflows->get($post, 'blog_publishing');
+
+        var_dump($workflow->can($post, 'request_review'));
+        var_dump($workflow->can($post, 'wait_for_manager'));
+        var_dump($workflow->can($post, 'manager_approval'));
+        var_dump($workflow->can($post, 'send'));
 
 
-    public function index(): Response
-    {
-        #@debug displaying current locale
-        #$locale = $request->getLocale();
-        #VarDumper::dump($locale);
+        // Update the currentState on the post
+        try {
+            $workflow->apply($post, 'request_review');
+        } catch (LogicException $e) {
+            print_r("ERROR 1");
+        }
+        // See all the available transitions for the post in the current state
+        $transitions = $workflow->getEnabledTransitions($post);
+        var_dump($transitions);
 
-        # display page from twig template
-        return $this->render('main/index.html.twig', []);
+        // Update the currentState on the post
+        try {
+            $workflow->apply($post, 'wait_for_manager');
+        } catch (LogicException $e) {
+            print_r("ERROR 2");
+        }
+        // See all the available transitions for the post in the current state
+        $transitions = $workflow->getEnabledTransitions($post);
+        var_dump($transitions);
+
+        // Update the currentState on the post
+        try {
+            $workflow->apply($post, 'send');
+        } catch (LogicException $e) {
+            print_r("ERROR 3");
+        }
+        // See all the available transitions for the post in the current state
+        $transitions = $workflow->getEnabledTransitions($post);
+        var_dump($transitions);
+
+        exit();*/
+
     }
-    */
 }

@@ -53,23 +53,17 @@ security:
 
     access_control:
         # require ROLE_ADMIN for /admin
-        - { path: ^/admin, roles: ROLE_ADMIN }
-        # require ROLE_MARKETING for /marketing
-        - { path: ^/marketing, roles: ROLE_MARKETING }
-        # require ROLE_PROVIDER for /provider
-        - { path: ^/provider, roles: ROLE_PROVIDER }
-        # require ROLE_MANAGER for /manager
-        - { path: ^/manager, roles: ROLE_MANAGER }
+        - { path: ^/admin, roles: [ROLE_ADMIN,ROLE_MARKETING,ROLE_MANAGER] }
         # require ROLE_MEMBRE for /member
         - { path: ^/member, roles: ROLE_MEMBER }
 
     role_hierarchy:
-        ROLE_USER: ROLE_USER
-        ROLE_MARKETING: [ROLE_USER]
-        ROLE_PROVIDER: [ROLE_USER]
-        ROLE_MANAGER: [ROLE_USER]
+       # ROLE_MEMBER: ROLE_MEMBER
+       # ROLE_MARKETING: [ROLE_MEMBER]
+       # ROLE_PROVIDER: [ROLE_MEMBER]
+       # ROLE_MANAGER: [ROLE_MEMBER]
         # https://symfony.com/doc/current/security/impersonating_user.html
-        ROLE_ADMIN: [ROLE_USER, ROLE_ALLOWED_TO_SWITCH]
+        ROLE_ADMIN: [ROLE_MEMBER, ROLE_ALLOWED_TO_SWITCH]
 
 
     # Information to encode password

@@ -1,0 +1,12 @@
+{% extends 'layout.html.twig' %}
+
+{% block page_title "Box Workflow"%}
+
+{% set active = "index" %}
+
+{% block content %}
+
+    <!--div-- style="text-align: center;">
+    </div-->
+    {{ include('workflow/workflow.twig.html') }}
+{% endblock %}

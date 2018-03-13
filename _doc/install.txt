@@ -22,7 +22,7 @@ DATABASE_URL=mysql://root:root@127.0.0.1:3306/box
 
 configuration des mails
 -----------------------
-
+# FREE SMTP
 ###> symfony/swiftmailer-bundle ###
 # For Gmail as a transport, use: "gmail://username:password@localhost"
 # For a generic SMTP server, use: "smtp://localhost:25?encryption=&auth_mode="
@@ -30,6 +30,21 @@ configuration des mails
 #MAILER_URL=null://localhost
 MAILER_URL=smtp://smtp.free.fr
 ###< symfony/swiftmailer-bundle ###
+
+# MAILTRAP SMTP
+###> symfony/swiftmailer-bundle ###
+# For Gmail as a transport, use: "gmail://username:password@localhost"
+# For a generic SMTP server, use: "smtp://localhost:25?encryption=&auth_mode="
+# Delivery is disabled by default via "null://localhost"
+MAILER_URL=smtp://smtp.mailtrap.io:2525?auth_mode=login&username=e5e05820e45013&password=e4ecbcfef4fb67
+#Host:
+#Port:	25 or 465 or 2525
+#Username:	e5e05820e45013
+#Password:	e4ecbcfef4fb67
+#Auth:	PLAIN, LOGIN and CRAM-MD5
+#TLS:	Optional
+###< symfony/swiftmailer-bundle ###
+
 
 
 si vous avez une configuration differente vous pouvez modifier en fonction des besoins

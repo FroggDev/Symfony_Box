@@ -1,0 +1,28 @@
+framework:
+    workflows:
+        box_sending:
+            type: 'workflow' # or 'state_machine'
+            marking_store:
+                type: 'single_state' # or 'multiple_state'
+                arguments:
+                    - 'workflowStatus'
+            supports:
+                - App\Entity\Box
+            places:
+                - box_creation
+                - products_request
+                - products_validation
+                - sent
+            transitions:
+                product_request:
+                    guard: "has_role('ROLE_MARKETING')"
+                    from: box_creation
+                    to: products_request
+                marketing_approval:
+                    guard: "has_role('ROLE_MARKETING')"
+                    from: products_request
+                    to: products_validation
+                manager_approval:
+                    guard: "has_role('ROLE_MANAGER')"
+                    from: products_validation
+                    to: sent

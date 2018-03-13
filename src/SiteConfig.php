@@ -7,14 +7,13 @@ namespace App;
  */
 class SiteConfig
 {
-
     ##################
     # WEBSITE CONFIG #
     ##################
 
-    const SITENAME="SutekinaBox";
+    const SITENAME = "SutekinaBox";
 
-    const SITEEMAIL="sutekinabox@frogg.fr";
+    const SITEEMAIL = "sutekinabox@frogg.fr";
 
     ###############
     # USER CONFIG #
@@ -23,4 +22,10 @@ class SiteConfig
     const USERENTITY = "User";
 
     const USERROLES = ['ROLE_MEMBER','ROLE_MARKETING', 'ROLE_MANAGER', 'ROLE_ADMIN' ];
+
+    ################
+    # ADMIN CONFIG #
+    ################
+
+    const NBBOXPERPAGE = 10;
 }

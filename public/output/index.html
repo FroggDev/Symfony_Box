@@ -1,0 +1,97 @@
+<html><body> 
+<h1>PHP Metrics</h1> 
+<a href="/output/phpmetrics.html">PHP Metrics results</a> 
+<h1>PHP CodeSniffer</h1> 
+<pre> 
+
+[1m[31mDeprecated[0m: The (unset) cast is deprecated[22m in [31mC:\dev\vendor\hoa\core\Core.php[0m on line [32m146[0m[22m
+
+[1mCall Stack:[22m
+    0.0003     393248   1. {main}() C:\dev\vendor\squizlabs\php_codesniffer\bin\phpcs:0
+    0.0009     430768   2. spl_autoload_call() C:\dev\vendor\squizlabs\php_codesniffer\bin\phpcs:17
+    0.0009     430816   3. PHP_CodeSniffer\Autoload::load() C:\dev\vendor\squizlabs\php_codesniffer\bin\phpcs:17
+    0.0011     432296   4. include('C:\dev\vendor\autoload.php') C:\dev\vendor\squizlabs\php_codesniffer\autoload.php:79
+    0.0015     446704   5. ComposerAutoloaderInit62d1c37c676bb4a38fd1b22d49439ec7::getLoader() C:\dev\vendor\autoload.php:7
+    0.0049     729424   6. composerRequire62d1c37c676bb4a38fd1b22d49439ec7() C:\dev\vendor\composer\autoload_real.php:56
+
+
+PHP CODE SNIFFER REPORT SUMMARY
+----------------------------------------------------------------------
+FILE                                                  ERRORS  WARNINGS
+----------------------------------------------------------------------
+...t\Desktop\Symfony_Box\src\Command\UserManager.php  6       0
+...top\Symfony_Box\src\Common\Traits\MailerTrait.php  2       0
+...ktop\Symfony_Box\src\Controller\BoxController.php  4       1
+...op\Symfony_Box\src\Controller\IndexController.php  2       0
+...p\Symfony_Box\src\Controller\LoggedController.php  3       0
+...op\Symfony_Box\src\Controller\LoginController.php  2       2
+...\Etudiant\Desktop\Symfony_Box\src\Entity\User.php  5       0
+...fony_Box\src\Exception\UndefinedRoleException.php  2       0
+...ymfony_Box\src\Form\Security\UserPasswordType.php  1       0
+...Symfony_Box\src\Form\Security\UserRecoverType.php  1       0
+...esktop\Symfony_Box\src\Form\Security\UserType.php  2       0
+...op\Symfony_Box\src\Form\User\BoxSubscribeType.php  3       0
+...fony_Box\src\Migrations\Version20180312114316.php  0       3
+...fony_Box\src\Migrations\Version20180312154350.php  0       2
+...top\Symfony_Box\src\Repository\UserRepository.php  6       0
+...s\Etudiant\Desktop\Symfony_Box\src\SiteConfig.php  2       0
+...top\Symfony_Box\src\Subscriber\UserSubscriber.php  2       0
+----------------------------------------------------------------------
+A TOTAL OF 43 ERRORS AND 8 WARNINGS WERE FOUND IN 17 FILES
+----------------------------------------------------------------------
+PHPCBF CAN FIX 43 OF THESE SNIFF VIOLATIONS AUTOMATICALLY
+----------------------------------------------------------------------
+
+Time: 1.64 secs; Memory: 8Mb
+
+</pre> 
+<h1>PHP CopyPasteDetector</h1> 
+<pre> 
+
+[1m[31mDeprecated[0m: The (unset) cast is deprecated[22m in [31mC:\dev\vendor\hoa\core\Core.php[0m on line [32m146[0m[22m
+
+[1mCall Stack:[22m
+    0.0004     396744   1. {main}() C:\dev\vendor\sebastian\phpcpd\phpcpd:0
+    0.0007     397848   2. require('C:\dev\vendor\autoload.php') C:\dev\vendor\sebastian\phpcpd\phpcpd:36
+    0.0012     412920   3. ComposerAutoloaderInit62d1c37c676bb4a38fd1b22d49439ec7::getLoader() C:\dev\vendor\autoload.php:7
+    0.0072     696552   4. composerRequire62d1c37c676bb4a38fd1b22d49439ec7() C:\dev\vendor\composer\autoload_real.php:56
+
+phpcpd 4.0.0 by Sebastian Bergmann.
+
+0.00% duplicated lines out of 1961 total lines of code.
+
+Time: 398 ms, Memory: 6.00MB
+</pre> 
+<h1>PHP MessDetector</h1> 
+<pre> 
+
+[1m[31mDeprecated[0m: The (unset) cast is deprecated[22m in [31mC:\dev\vendor\hoa\core\Core.php[0m on line [32m146[0m[22m
+
+[1mCall Stack:[22m
+    0.0005     435480   1. {main}() C:\dev\vendor\phpmd\phpmd\src\bin\phpmd:0
+    0.0008     436584   2. require_once('C:\dev\vendor\autoload.php') C:\dev\vendor\phpmd\phpmd\src\bin\phpmd:8
+    0.0011     451336   3. ComposerAutoloaderInit62d1c37c676bb4a38fd1b22d49439ec7::getLoader() C:\dev\vendor\autoload.php:7
+    0.0047     734968   4. composerRequire62d1c37c676bb4a38fd1b22d49439ec7() C:\dev\vendor\composer\autoload_real.php:56
+
+C:\Users\Etudiant\Desktop\Symfony_Box\src\Command\UserManager.php:123	The method displayMainMenu() contains an exit expression.
+C:\Users\Etudiant\Desktop\Symfony_Box\src\Command\UserManager.php:212	The method addUserRole() contains an exit expression.
+C:\Users\Etudiant\Desktop\Symfony_Box\src\Command\UserManager.php:269	The method removeUserRole() contains an exit expression.
+C:\Users\Etudiant\Desktop\Symfony_Box\src\Common\Traits\MailerTrait.php:25	Avoid variables with short names like $to. Configured minimum length is 3.
+C:\Users\Etudiant\Desktop\Symfony_Box\src\Controller\BoxController.php:57	The method boxSubscribe uses an else expression. Else is never necessary and you can simplify the code to work without else.
+C:\Users\Etudiant\Desktop\Symfony_Box\src\Entity\User.php:13	The class User has 11 public methods. Consider refactoring User to keep number of public methods under 10.
+C:\Users\Etudiant\Desktop\Symfony_Box\src\Entity\User.php:50	Avoid variables with short names like $id. Configured minimum length is 3.
+C:\Users\Etudiant\Desktop\Symfony_Box\src\Entity\User.php:145	Avoid variables with short names like $id. Configured minimum length is 3.
+C:\Users\Etudiant\Desktop\Symfony_Box\src\Entity\User.php:546	The 'getHasSubscribe()' method which returns a boolean should be named 'is...()' or 'has...()'
+C:\Users\Etudiant\Desktop\Symfony_Box\src\Migrations\Version20180312114316.php:13	Avoid using short method names like Version20180312114316::up(). The configured minimum method name length is 3.
+C:\Users\Etudiant\Desktop\Symfony_Box\src\Migrations\Version20180312114316.php:13	Avoid unused parameters such as '$schema'.
+C:\Users\Etudiant\Desktop\Symfony_Box\src\Migrations\Version20180312114316.php:21	Avoid unused parameters such as '$schema'.
+C:\Users\Etudiant\Desktop\Symfony_Box\src\Migrations\Version20180312154350.php:13	Avoid using short method names like Version20180312154350::up(). The configured minimum method name length is 3.
+C:\Users\Etudiant\Desktop\Symfony_Box\src\Migrations\Version20180312154350.php:13	Avoid unused parameters such as '$schema'.
+C:\Users\Etudiant\Desktop\Symfony_Box\src\Migrations\Version20180312154350.php:21	Avoid unused parameters such as '$schema'.
+</pre> 
+<h1>PHP Depend</h1> 
+<h2>Depend</h2> 
+<img src="/output/jdepend.svg"/> 
+<h2>Pyramid</h2> 
+<img src="/output/pyramid.svg"/> 
+</body></html> 

@@ -1,6 +1,5 @@
 {% extends "base.html.twig" %}
 
-
 {% block stylesheets %}
     <!-- Favicons -->
     <link rel="shortcut icon" href="{{ asset('images/favicon.ico') }}">
@@ -26,6 +25,8 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <!-- A RANGER -->
+
     <style type="text/css">
         header {
             background-image: url({{ asset('images/bandeau.jpg') }});
@@ -35,6 +36,56 @@
         }
         header .row {margin-bottom: 0px !important;}
     </style>
+
+    <!-- ONLY WORK FLOW -->
+    <style>
+        #workflow{
+            display: table;
+            margin: auto;
+        }
+
+        #workflowContainer{
+            text-align: center;
+        }
+
+        .round,.square{
+            width:100px;
+            height:100px;
+            text-align:center;
+            vertical-align: middle;
+            display: table-cell;
+
+            color: #E00000;
+            text-shadow: 0 4px 0 rgba(0,51,102,0);
+            padding: 10px 20px;
+            box-shadow: 0 1px 0 0 #FFFFFF inset;
+            border: 1px solid #F5C9D2;
+            background: linear-gradient( -180deg , #FFF2F5 , #FFE3E9 );
+
+        }
+
+        .selected{
+            color: #004D40;
+            text-shadow: 0 4px 0 rgba(0,51,102,0);
+            padding: 10px 20px;
+            border: 1px solid #00897B;
+            background: linear-gradient( -180deg , #B2DFDB , #80CBC4 );
+            box-shadow: 0 1px 3px 0 rgba(0,0,0,0.5) , 0 0 1px 0 #FFFFFF inset;
+        }
+
+
+        .arrow{
+            text-align:center;
+            vertical-align: middle;
+            display: table-cell;
+            color: #E00000;
+        }
+
+        .round{border-radius: 50px;}
+
+
+    </style>
+
 {% endblock %}
 
 {% block body %}

@@ -57,8 +57,7 @@ ul, li {
   margin: 0px; }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-  line-height: 1.4;
-  font-family: "Roboto Slab", serif; }
+  line-height: 1.4; }
 
 /*==========Components=========*/
 .dropdown-customer {
@@ -253,7 +252,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 /*==========Menu=========*/
 .menu {
   position: relative;
-  background-color: #333;
+  background-color: #4DB6AC;
   margin-bottom: 20px;
   height: 50px; }
   .menu ul {
@@ -1574,7 +1573,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 /*==========Footer=========*/
 .footer {
   background-color: #333;
-  border-top: 5px solid #E53526;
+  border-top: 5px solid #4DB6AC;
   margin-top: 50px; }
   .footer.footer-fix {
     margin: 0px; }
