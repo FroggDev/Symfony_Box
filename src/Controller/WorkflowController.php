@@ -1,7 +1,6 @@
 <?php
 namespace App\Controller;
 
-
 use App\Entity\Box;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
@@ -26,7 +25,7 @@ class WorkflowController extends Controller
      * @param Request $request
      * @return Response
      */
-    public function boxWorkflow(Box $box,Request $request,Registry $workflows): Response
+    public function boxWorkflow(Box $box, Request $request, Registry $workflows): Response
     {
         # Display box workflow
         return $this->render('form/boxworkflow.html.twig', ['box' => $box , 'workflow' => $workflows]);
@@ -40,9 +39,9 @@ class WorkflowController extends Controller
      * @param Request $request
      * @return Response
      */
-    public function workflowAction(string $action, Box $box,Registry $workflows): Response
+    public function workflowAction(string $action, Box $box, Registry $workflows): Response
     {
-        if(!$box){
+        if (!$box) {
             /**
              * @TODO AN ERROR HERE
              */
@@ -54,21 +53,17 @@ class WorkflowController extends Controller
         # -------------
         if ($workflow->can($box, $action)) {
             try {
-
                 $workflow->apply($box, $action);
 
                 # insert into database
                 $eManager = $this->getDoctrine()->getManager();
                 $eManager->flush();
-
-
             } catch (LogicException $e) {
                 /**
                  * @TODO AN ERROR HERE
                  */
             }
-        }
-        else{
+        } else {
             /**
              * @TODO AN ERROR HERE
              */
@@ -78,5 +73,4 @@ class WorkflowController extends Controller
         # Display box workflow
         return $this->render('form/boxworkflow.html.twig', ['box' => $box,'workflow' => $workflows]);
     }
-
 }

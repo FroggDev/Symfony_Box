@@ -51,7 +51,6 @@ class UserManager extends Command
     {
         parent::__construct($name);
         $this->eManager = $eManager;
-
     }
 
     /**
@@ -103,7 +102,9 @@ class UserManager extends Command
                     'Add user role (requier user id)',
                     'Remove user role (requier user id)',
                     'Exit'
-                ), 'Display user list');
+                ),
+                'Display user list'
+            );
 
             #Action from choice
             switch ($input) {

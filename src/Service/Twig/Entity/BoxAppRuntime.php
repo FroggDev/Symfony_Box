@@ -93,7 +93,7 @@ class BoxAppRuntime
      */
     private function getBoxHref(Box $box) : string
     {
-        return $this->router->generate('box_workflow',['id' => $box->getId()],UrlGeneratorInterface::ABSOLUTE_URL );
+        return $this->router->generate('box_workflow', ['id' => $box->getId()], UrlGeneratorInterface::ABSOLUTE_URL);
     }
 
     /**
@@ -119,13 +119,12 @@ class BoxAppRuntime
      * @param string|null $currentPage
      * @return string
      */
-    private function getBoxesHref(string $currentPage=null) : string
+    private function getBoxesHref(string $currentPage = null) : string
     {
         if ($currentPage) {
             $routeParams['currentPage'] = $currentPage;
         }
 
-        return $this->router->generate('index_admin', $routeParams,UrlGeneratorInterface::ABSOLUTE_URL);
+        return $this->router->generate('index_admin', $routeParams, UrlGeneratorInterface::ABSOLUTE_URL);
     }
-
 }

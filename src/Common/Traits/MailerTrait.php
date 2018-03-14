@@ -27,15 +27,15 @@ trait MailerTrait
     public function send(string  $from, string $to, string $template, string $subject, $data)
     {
 
-        if(method_exists($this,'renderView')){
+        if (method_exists($this, 'renderView')) {
             $render = $this->renderView(
-            // templates/emails/registration.html.twig
+                // templates/emails/registration.html.twig
                 $template,
                 array('data' => $data)
             );
-        }else{
+        } else {
             $render = $this->templating->render(
-            // templates/emails/registration.html.twig
+                // templates/emails/registration.html.twig
                 $template,
                 array('data' => $data)
             );

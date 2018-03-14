@@ -38,5 +38,4 @@ class SiteConfig
     const MAILMANAGER = "manager@frogg.fr";
 
     const MAILPROVIDER = "provider@frogg.fr";
-
 }

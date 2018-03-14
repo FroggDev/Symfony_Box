@@ -22,7 +22,8 @@ class IndexController extends Controller
      * @param Registry $workflows
      */
     public function edit(Registry $workflows)
-    {/*
+    {
+/*
         $post = new Box();
         $workflow = $workflows->get($post);
 
@@ -67,6 +68,5 @@ class IndexController extends Controller
         var_dump($transitions);
 
         exit();*/
-
     }
 }

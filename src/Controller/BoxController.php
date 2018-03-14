@@ -53,7 +53,6 @@ class BoxController extends Controller
 
         # check form datas
         if ($form->isSubmitted() && $form->isValid()) {
-
             # get datas
             $user = $form->getData();
 
@@ -82,7 +81,6 @@ class BoxController extends Controller
         return $this->render('form/boxsubscribe.html.twig', [
             'form' => $form->createView()
         ]);
-
     }
 
 
@@ -96,7 +94,7 @@ class BoxController extends Controller
      * )
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function indexAdmin(string $currentPage,string $search): Response
+    public function indexAdmin(string $currentPage, string $search): Response
     {
 
         # FROM DOCTRINE
@@ -107,7 +105,7 @@ class BoxController extends Controller
         $boxes = $repositoryBox->findAll();
 
         # Apply search filter
-        if($search!="fulllist"){
+        if ($search!="fulllist") {
             # search in array
             $boxes = array_filter(
                 $boxes,
@@ -147,7 +145,7 @@ class BoxController extends Controller
      * @param Request $request
      * @return Response
      */
-    public function boxEdit(string $id , Request $request): Response
+    public function boxEdit(string $id, Request $request): Response
     {
         //check if box exist
         $box = $this
@@ -155,7 +153,7 @@ class BoxController extends Controller
             ->getRepository(Box::class)
             ->findOneBy(['id'=>$id]);
 
-        if($box){
+        if ($box) {
             $featuredImageSave = $box->getFeaturedImage();
         }
 
@@ -168,7 +166,6 @@ class BoxController extends Controller
 
         # check form datas
         if ($form->isSubmitted() && $form->isValid()) {
-
             # get datas
             $box = $form->getData();
 
@@ -177,7 +174,6 @@ class BoxController extends Controller
 
             # Only if image exist
             if ($featuredImage) {
-
                 VarDumper::dump("PASSING HERE ???");
 
                 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -193,8 +189,8 @@ class BoxController extends Controller
 
                 # update image name
                 $box->setFeaturedImage($fileName);
-            }else{
-                if(isset($featuredImageSave)) {
+            } else {
+                if (isset($featuredImageSave)) {
                     $box->setFeaturedImage($featuredImageSave);
                 }
             }
@@ -205,14 +201,12 @@ class BoxController extends Controller
             $eManager->flush();
 
             # redirect user
-            return $this->redirectToRoute('box_workflow',['id'=>$box->getId()]);
+            return $this->redirectToRoute('box_workflow', ['id'=>$box->getId()]);
         }
 
         # Display form view
         return $this->render('form/boxedit.html.twig', [
             'form' => $form->createView()
         ]);
-
     }
-
 }

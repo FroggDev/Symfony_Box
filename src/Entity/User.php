@@ -281,7 +281,7 @@ class User implements AdvancedUserInterface
      */
     public function hasRole(string $role): bool
     {
-       return in_array($role,$this->roles);
+        return in_array($role, $this->roles);
     }
 
     /**
@@ -557,5 +557,4 @@ class User implements AdvancedUserInterface
         $this->hasSubscribe = $hasSubscribe;
         return $this;
     }
-
 }

@@ -36,23 +36,23 @@ class WorkflowSubscriber implements EventSubscriberInterface
         $box = $event->getSubject();
 
         switch ($event->getTransition()->getName()) {
-            case "product_request" :
+            case "product_request":
                 $this->providerMailOk($box);
                 break;
 
-            case "marketing_approval" :
+            case "marketing_approval":
                 $this->managerMailOk($box);
                 break;
 
-            case "manager_approval" :
+            case "manager_approval":
                 $this->userMailok($box);
                 break;
 
-            case "cancel_products_request" :
+            case "cancel_products_request":
                 $this->marketingMailCancel($box);
                 break;
 
-            case "cancel_products_validation" :
+            case "cancel_products_validation":
                 $this->providerMailCancel($box);
                 break;
         }
@@ -64,7 +64,7 @@ class WorkflowSubscriber implements EventSubscriberInterface
      */
     public function providerMailOk(Box $box)
     {
-         $this->sendMail(SiteConfig::MAILMARKETING, SiteConfig::MAILPROVIDER, 'Products list request', 'providerMailOk',$box);
+         $this->sendMail(SiteConfig::MAILMARKETING, SiteConfig::MAILPROVIDER, 'Products list request', 'providerMailOk', $box);
     }
 
     /**

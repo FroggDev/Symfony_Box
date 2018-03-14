@@ -2,7 +2,6 @@
 
 namespace App\Service\Twig\Entity;
 
-
 use App\Entity\Box;
 use phpDocumentor\Reflection\Types\Context;
 use Symfony\Component\Routing\RouterInterface;

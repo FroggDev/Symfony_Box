@@ -2,37 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="056acc77-fadf-47e3-8322-248f5f7cf8dd" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Controller/WorkflowController.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Service/Twig/Entity/WorkflowAppRuntime.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Subscriber/WorkflowSubscriber.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/templates/form/boxlist.html.twig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/templates/mail/workflow/managerMailCancel.html.twig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/templates/mail/workflow/managerMailOk.html.twig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/templates/mail/workflow/marketingMailCancel.html.twig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/templates/mail/workflow/providerMailOk.html.twig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/templates/mail/workflow/userMailOk.html.twig" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/_doc/install.txt" afterPath="$PROJECT_DIR$/_doc/install.txt" />
-      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" afterPath="$PROJECT_DIR$/config/packages/security.yaml" />
-      <change beforePath="$PROJECT_DIR$/config/packages/workflow.yaml" afterPath="$PROJECT_DIR$/config/packages/workflow.yaml" />
-      <change beforePath="$PROJECT_DIR$/config/services.yaml" afterPath="$PROJECT_DIR$/config/services.yaml" />
       <change beforePath="$PROJECT_DIR$/src/Command/UserManager.php" afterPath="$PROJECT_DIR$/src/Command/UserManager.php" />
       <change beforePath="$PROJECT_DIR$/src/Common/Traits/MailerTrait.php" afterPath="$PROJECT_DIR$/src/Common/Traits/MailerTrait.php" />
       <change beforePath="$PROJECT_DIR$/src/Controller/BoxController.php" afterPath="$PROJECT_DIR$/src/Controller/BoxController.php" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/IndexController.php" afterPath="$PROJECT_DIR$/src/Controller/IndexController.php" />
       <change beforePath="$PROJECT_DIR$/src/Controller/LoggedController.php" afterPath="$PROJECT_DIR$/src/Controller/LoggedController.php" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/LoginController.php" afterPath="$PROJECT_DIR$/src/Controller/LoginController.php" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/WorkflowController.php" afterPath="$PROJECT_DIR$/src/Controller/WorkflowController.php" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Box.php" afterPath="$PROJECT_DIR$/src/Entity/Box.php" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" afterPath="$PROJECT_DIR$/src/Entity/User.php" />
+      <change beforePath="$PROJECT_DIR$/src/Exception/UndefinedRoleException.php" afterPath="$PROJECT_DIR$/src/Exception/UndefinedRoleException.php" />
       <change beforePath="$PROJECT_DIR$/src/Form/Admin/BoxCreateType.php" afterPath="$PROJECT_DIR$/src/Form/Admin/BoxCreateType.php" />
-      <change beforePath="$PROJECT_DIR$/src/Service/Twig/AppExtension.php" afterPath="$PROJECT_DIR$/src/Service/Twig/AppExtension.php" />
+      <change beforePath="$PROJECT_DIR$/src/Form/Security/UserPasswordType.php" afterPath="$PROJECT_DIR$/src/Form/Security/UserPasswordType.php" />
+      <change beforePath="$PROJECT_DIR$/src/Form/Security/UserRecoverType.php" afterPath="$PROJECT_DIR$/src/Form/Security/UserRecoverType.php" />
+      <change beforePath="$PROJECT_DIR$/src/Form/Security/UserType.php" afterPath="$PROJECT_DIR$/src/Form/Security/UserType.php" />
+      <change beforePath="$PROJECT_DIR$/src/Form/User/BoxSubscribeType.php" afterPath="$PROJECT_DIR$/src/Form/User/BoxSubscribeType.php" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/BoxRepository.php" afterPath="$PROJECT_DIR$/src/Repository/BoxRepository.php" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/UserRepository.php" afterPath="$PROJECT_DIR$/src/Repository/UserRepository.php" />
       <change beforePath="$PROJECT_DIR$/src/Service/Twig/Entity/BoxAppRuntime.php" afterPath="$PROJECT_DIR$/src/Service/Twig/Entity/BoxAppRuntime.php" />
+      <change beforePath="$PROJECT_DIR$/src/Service/Twig/Entity/WorkflowAppRuntime.php" afterPath="$PROJECT_DIR$/src/Service/Twig/Entity/WorkflowAppRuntime.php" />
       <change beforePath="$PROJECT_DIR$/src/SiteConfig.php" afterPath="$PROJECT_DIR$/src/SiteConfig.php" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" afterPath="$PROJECT_DIR$/templates/base.html.twig" />
-      <change beforePath="$PROJECT_DIR$/templates/components/menu.html.twig" afterPath="$PROJECT_DIR$/templates/components/menu.html.twig" />
-      <change beforePath="$PROJECT_DIR$/templates/form/boxcreate.html.twig" afterPath="$PROJECT_DIR$/templates/form/boxedit.html.twig" />
-      <change beforePath="$PROJECT_DIR$/templates/form/boxworkflow.html.twig" afterPath="$PROJECT_DIR$/templates/form/boxworkflow.html.twig" />
-      <change beforePath="$PROJECT_DIR$/templates/layout.html.twig" afterPath="$PROJECT_DIR$/templates/layout.html.twig" />
-      <change beforePath="$PROJECT_DIR$/templates/security/login.html.twig" afterPath="$PROJECT_DIR$/templates/security/login.html.twig" />
-      <change beforePath="$PROJECT_DIR$/templates/user/admin.html.twig" afterPath="$PROJECT_DIR$/templates/user/admin.html.twig" />
-      <change beforePath="$PROJECT_DIR$/templates/workflow/old_svg.twig.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/templates/workflow/workflow.twig.html" afterPath="$PROJECT_DIR$/templates/form/workflow.twig.html" />
+      <change beforePath="$PROJECT_DIR$/src/Subscriber/UserSubscriber.php" afterPath="$PROJECT_DIR$/src/Subscriber/UserSubscriber.php" />
+      <change beforePath="$PROJECT_DIR$/src/Subscriber/WorkflowSubscriber.php" afterPath="$PROJECT_DIR$/src/Subscriber/WorkflowSubscriber.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -110,11 +101,11 @@
           <file leaf-file-name="WorkflowAppRuntime.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/Service/Twig/Entity/WorkflowAppRuntime.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="185">
-                  <caret line="35" column="7" lean-forward="true" selection-start-line="35" selection-start-column="7" selection-end-line="35" selection-end-column="7" />
+                <state relative-caret-position="236">
+                  <caret line="34" column="7" lean-forward="false" selection-start-line="34" selection-start-column="7" selection-end-line="34" selection-end-column="7" />
                   <folding>
-                    <marker date="1521044297629" expanded="true" signature="2948:3164" ph="..." />
-                    <marker date="1521044297629" expanded="true" signature="3088:3158" ph="..." />
+                    <marker date="1521044487801" expanded="true" signature="2947:3163" ph="..." />
+                    <marker date="1521044487801" expanded="true" signature="3087:3157" ph="..." />
                   </folding>
                 </state>
               </provider>
@@ -499,12 +490,12 @@
       <workItem from="1520852081667" duration="19879000" />
       <workItem from="1520876132617" duration="16994000" />
       <workItem from="1520930294352" duration="27229000" />
-      <workItem from="1521016601535" duration="27467000" />
+      <workItem from="1521016601535" duration="27533000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91731000" />
+    <option name="totallyTimeSpent" value="91797000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -523,7 +514,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32792208" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32792208" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14872068" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -978,11 +969,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Service/Twig/Entity/WorkflowAppRuntime.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="35" column="7" lean-forward="true" selection-start-line="35" selection-start-column="7" selection-end-line="35" selection-end-column="7" />
+        <state relative-caret-position="236">
+          <caret line="34" column="7" lean-forward="false" selection-start-line="34" selection-start-column="7" selection-end-line="34" selection-end-column="7" />
           <folding>
-            <marker date="1521044297629" expanded="true" signature="2948:3164" ph="..." />
-            <marker date="1521044297629" expanded="true" signature="3088:3158" ph="..." />
+            <marker date="1521044487801" expanded="true" signature="2947:3163" ph="..." />
+            <marker date="1521044487801" expanded="true" signature="3087:3157" ph="..." />
           </folding>
         </state>
       </provider>

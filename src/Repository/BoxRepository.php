@@ -6,7 +6,6 @@ use App\Entity\Box;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Symfony\Bridge\Doctrine\RegistryInterface;
 
-
 /**
  * @method Box|null find($id, $lockMode = null, $lockVersion = null)
  * @method Box|null findOneBy(array $criteria, array $orderBy = null)
@@ -31,7 +30,7 @@ class BoxRepository extends ServiceEntityRepository
      */
     public function findAll(): array
     {
-        if($this->allBox){
+        if ($this->allBox) {
             return $this->allBox;
         }
 

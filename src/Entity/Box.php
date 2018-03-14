@@ -198,5 +198,4 @@ class Box
         $this->description = $description;
         return $this;
     }
-
 }
