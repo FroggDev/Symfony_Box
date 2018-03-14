@@ -7,7 +7,9 @@ use App\Common\Traits\Html\ImgTagGeneratorTrait;
 use App\Common\Traits\String\MaxLengthTrait;
 use App\Entity\Box;
 use Symfony\Component\Asset\Packages;
+use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 use Symfony\Component\Routing\RouterInterface;
+use Symfony\Component\VarDumper\VarDumper;
 
 /**
  * Class ArticleAppRuntime
@@ -91,7 +93,7 @@ class BoxAppRuntime
      */
     private function getBoxHref(Box $box) : string
     {
-        return $this->router->generate('box_workflow',['id' => $box->getId()] );
+        return $this->router->generate('box_workflow',['id' => $box->getId()],UrlGeneratorInterface::ABSOLUTE_URL );
     }
 
     /**
@@ -123,7 +125,7 @@ class BoxAppRuntime
             $routeParams['currentPage'] = $currentPage;
         }
 
-        return $this->router->generate('index_admin', $routeParams);
+        return $this->router->generate('index_admin', $routeParams,UrlGeneratorInterface::ABSOLUTE_URL);
     }
 
 }

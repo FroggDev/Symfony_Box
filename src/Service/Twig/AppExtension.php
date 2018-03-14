@@ -9,6 +9,7 @@ use App\Service\Twig\Entity\BoxAppRuntime;
 use App\Service\Twig\Entity\CategoryAppRuntime;
 use App\Service\Twig\Entity\LastAppRuntime;
 use App\Service\Twig\Entity\SearchAppRuntime;
+use App\Service\Twig\Entity\WorkflowAppRuntime;
 
 /**
  * Class AppExtension
@@ -41,10 +42,14 @@ class AppExtension extends \Twig_Extension
     {
         return [
             new \Twig_Function('getUri', [AppRuntime::class, 'getUri']),
-            # Links
+            # Box
             new \Twig_Function('boxLink', [BoxAppRuntime::class, 'boxLink']),
+            new \Twig_Function('boxImage', [BoxAppRuntime::class, 'boxImage']),
             new \Twig_Function('boxImageLink', [BoxAppRuntime::class, 'boxImageLink']),
             new \Twig_Function('boxesLink', [BoxAppRuntime::class, 'boxesLink']),
+            # Workflow
+            new \Twig_Function('workflowLinks', [WorkflowAppRuntime::class, 'workflowLinks']),
+
         ];
     }
 }

@@ -54,7 +54,7 @@ class BoxCreateType extends AbstractType
             'submit',
             SubmitType::class,
             [
-                'label' => 'Create',
+                'label' => 'Edit',
                 'attr' => array('class' => 'btn btn-block btn-primary')
             ]
         )->getForm();

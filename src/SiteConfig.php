@@ -27,5 +27,16 @@ class SiteConfig
     # ADMIN CONFIG #
     ################
 
-    const NBBOXPERPAGE = 10;
+    const NBBOXPERPAGE = 3;
+
+    ##################
+    # SERVICES MAILS #
+    ##################
+
+    const MAILMARKETING = "marketing@frogg.fr";
+
+    const MAILMANAGER = "manager@frogg.fr";
+
+    const MAILPROVIDER = "provider@frogg.fr";
+
 }

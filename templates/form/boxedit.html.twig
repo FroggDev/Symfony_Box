@@ -1,14 +1,14 @@
 {% extends"layout.html.twig" %}
 
-{% block page_title "SutekinaBox Creatiion" %}
+{% block page_title "SutekinaBox Edition" %}
 
-{% set active = "box_create" %}
+{% set active = "box_edit" %}
 
 {% block content %}
 
     <div class="row">
         <div class="col-xs-6 col-xs-push-3">
-            <h2 class="text-center">SutekinaBox Creation</h2>
+            <h2 class="text-center">SutekinaBox Edition</h2>
             {% form_theme form 'bootstrap_4_horizontal_layout.html.twig' %}
             {{ form(form) }}
         </div>

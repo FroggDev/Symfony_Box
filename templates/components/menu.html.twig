@@ -16,13 +16,16 @@
         {% if is_granted('IS_AUTHENTICATED_FULLY') %}
 
         {% if is_granted('ROLE_MARKETING')%}
-            <li {% if active == 'box_create' %}class="current"{% endif %}><a href="{{ path('box_create') }}">Box Creation</a></li>
-        {% elseif is_granted('ROLE_MANAGER') %}
-            <!-- TODO -->
-        {% elseif is_granted('ROLE_MEMBER') %}
-            <li {% if active == 'box_subscribe' %}class="current"{% endif %}><a href="{{ path('box_subscribe') }}">Box Subscription</a></li>
+            <li {% if active == 'box_edit' %}class="current"{% endif %}><a href="{{ path('box_edit') }}">Box Creation</a></li>
         {% endif %}
 
+        {% if is_granted('ROLE_MANAGER') %}
+            <!-- TODO -->
+        {% endif %}
+
+        {% if is_granted('ROLE_MEMBER') %}
+            <li {% if active == 'box_subscribe' %}class="current"{% endif %}><a href="{{ path('box_subscribe') }}">Box Subscription</a></li>
+        {% endif %}
 
         <li style="float: right;">
             <a href="{{ path('security_logout') }}">Logout</a>
@@ -30,4 +33,11 @@
 
         {% endif %}
     </ul>
+
+    <div class="userstatus">
+        {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+            Welcome {{ app.user.firstname }} {{ app.user.lastname }} <b>{{ app.user.getRoles | join('+') }}</b>{{ displayWorkflowNotification }}
+        {% endif %}
+    </div>
+
 </nav>

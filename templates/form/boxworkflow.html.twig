@@ -4,9 +4,29 @@
 
 {% set active = "index" %}
 
-{% block content %}
+{% set status=box.workflowStatus %}
 
-    <!--div-- style="text-align: center;">
-    </div-->
-    {{ include('workflow/workflow.twig.html') }}
+{% block content %}
+    <div class="col-md-8 col-sm-12" style="margin: auto;float:none;">
+
+    <section id="workflowDescription">
+        <div class="imgContainer">{{ boxImage(box) | raw }}</div>
+        <h2>{{ box.name }}</h2>
+        <p>{{ box.description }}</p>
+    </section>
+
+    <br/>
+
+    {{ include('form/workflow.twig.html') }}
+
+    <br/><br/>
+
+    <div class="col-md-8 col-sm-8" style="margin: auto;float:none;">
+
+    {{ workflowLinks(workflow,box) }}
+
+    </div>
+
+    </div>
+
 {% endblock %}

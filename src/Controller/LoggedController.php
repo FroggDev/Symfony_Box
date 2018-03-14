@@ -64,41 +64,4 @@ class LoggedController extends Controller
         # Display index
         return $this->render('user/index.html.twig');
     }
-
-    /**
-     * @Route(
-     *     "/admin/index.html",
-     *      name="index_admin",
-     *      requirements={"currentPage" : "\d+"},
-     *      defaults={"currentPage"="1"},
-     *      methods={"GET"}
-     * )
-     * @return \Symfony\Component\HttpFoundation\Response
-     */
-    public function indexAdmin(string $currentPage): Response
-    {
-
-        # FROM DOCTRINE
-        # get repo category
-        $repositoryBox = $this->getDoctrine()->getRepository(Box::class);
-
-        # get category from category
-        $boxes = $repositoryBox->findAll();
-
-        # get number of elenmts
-        $countBox =count($boxes);
-
-        # get only wanted articles
-        $boxes = array_slice($boxes, ($currentPage-1) * SiteConfig::NBBOXPERPAGE, SiteConfig::NBBOXPERPAGE);
-
-        # number of pagination
-        $countPagination =  ceil($countBox / SiteConfig::NBBOXPERPAGE);
-
-        # display page from twig template
-        return $this->render('user/admin.html.twig', [
-            'boxes' => $boxes,
-            'currentPage' => $currentPage,
-            'countPagination' => $countPagination
-        ]);
-    }
 }

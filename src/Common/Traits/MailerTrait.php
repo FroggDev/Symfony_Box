@@ -12,6 +12,8 @@ trait MailerTrait
      */
     private $mailer;
 
+    private $templating;
+
     /**
      * @param string $from
      * @param string $to
@@ -25,17 +27,24 @@ trait MailerTrait
     public function send(string  $from, string $to, string $template, string $subject, $data)
     {
 
+        if(method_exists($this,'renderView')){
+            $render = $this->renderView(
+            // templates/emails/registration.html.twig
+                $template,
+                array('data' => $data)
+            );
+        }else{
+            $render = $this->templating->render(
+            // templates/emails/registration.html.twig
+                $template,
+                array('data' => $data)
+            );
+        }
+
         $message = (new \Swift_Message($subject))
             ->setFrom($from)
             ->setTo($to)
-            ->setBody(
-                $this->renderView(
-                // templates/emails/registration.html.twig
-                    $template,
-                    array('data' => $data)
-                ),
-                'text/html'
-            )
+            ->setBody($render, 'text/html')
             /*
              * If you also want to include a plaintext version of the message
             ->addPart(

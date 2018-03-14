@@ -51,10 +51,20 @@ services:
             - { name: twig.runtime }
 
     # Box Custom Twig Filter @router & @assets injection
-    app.twig_runtime_article:
+    app.twig_runtime_box:
         class: App\Service\Twig\Entity\BoxAppRuntime
         arguments:
             - "@router"
             - "@assets.packages"
         tags:
             - { name: twig.runtime }
+
+    # Box Custom Twig Filter @router & @assets injection
+    app.twig_runtime_workflow:
+        class: App\Service\Twig\Entity\WorkflowAppRuntime
+        arguments:
+            - "@router"
+            - "@security.token_storage"
+        tags:
+            - { name: twig.runtime }
+

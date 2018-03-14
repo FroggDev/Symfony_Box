@@ -6,91 +6,20 @@
 
 {% block content %}
 
-     {# PUT THIS SOMEWHERE ELSE LISTE DES BOX ICI #}
+    {{ include('form/boxlist.html.twig') }}
 
+{% endblock %}
 
-<div class="row">
-
-    <!--colleft-->
-    <div class="col-md-8 col-sm-12">
-
-        {% if boxes is  empty %}
-            <div class="alert alert-danger">
-                <strong>No box available.</strong>
-            </div>
-        {% else %}
-
-            <div class="box-caption">
-                <span>Box List</span>
-            </div>
-
-            <div class="list-news-cate">
-                <article class="news-cate-item">
-                    {% for box in boxes %}
-                        <div class="row">
-                            <div class="col-md-2 col-sm-2 col-xs-12">
-                                {{ boxImageLink(box) | raw }}
-                            </div>
-                            <div class="col-md-7 col-sm-7 col-xs-12">
-                                <h3>{{ boxLink(box,47) | raw }}</h3>
-                                <div class="meta-post">
-                                    {# BOX CREATE USERNAME HERE ??#}
-                                    <em></em>
-                                    <span>{{ box.dateCreation }}</span>
-                                </div>
-                                {{  box.description |  maxLen(250) | raw }}
-                            </div>
-                        </div>
-                    {% endfor %}
-                </article>
-            </div>
-
-            <div class="paging">
-                {% if currentPage>1 %}{{ boxesLink( "Prev",null, currentPage-1) | raw  }}{% endif %}
-                {% for i in 0..countPagination-1 %}
-                    {% if currentPage==i+1 %}
-                        {% set paginationClass='current' %}
-                    {% else %}
-                        {% set paginationClass='' %}
-                    {% endif %}
-                    {{ boxesLink(i+1,paginationClass,i+1) | raw  }}
-                {% endfor %}
-                {% if currentPage<countPagination %}{{ boxesLink( "Next",null, currentPage+1) | raw  }}{% endif %}
-            </div>
-
-
-        {% endif %}
-
-    </div>
-
-</div>
-
-
-    {##% if workflow_can(post, 'publish') %#
-        <a href="">Publish article</a>
-    {#% endif %}
-    {#% if workflow_can(post, 'to_review') %}
-        <a href="">Submit to review</a>
-    {#% endif %}
-    {#% if workflow_can(post, 'reject') %}
-        <a href="">Reject article</a>
-    {#% endif %#}
-
-    {# Or loop through the enabled transitions #}
-    {#% for transition in workflow_transitions(post) %}
-        <a href="">{{ transition.name }}</a>
-    {% else %}
-        No actions available.
-    {% endfor %#}
-
-    {# Check if the object is in some specific place #}
-    {#% if workflow_has_marked_place(post, 'to_review') %}
-        <p>This post is ready for review.</p>
-    {% endif %#}
-
-    {# Check if some place has been marked on the object #}
-    {#% if 'waiting_some_approval' in workflow_marked_places(post) %}
-        <span class="label">PENDING</span>
-    {% endif %#}
-
+{% block javascripts %}
+    {{ parent() }}
+<script>
+    // Search inpu and click button
+    var searchTxt = document.querySelector(".search-box INPUT");
+    var searchFunction = function(e){
+        if (searchTxt.value!="" && ( !e.keyCode || e.keyCode == 13 )) {
+            document.location="/admin/index/"+searchTxt.value+"/1.html";
+        }
+    }
+    document.querySelector(".search-box BUTTON").addEventListener( "click", searchFunction );
+</script>
 {% endblock %}

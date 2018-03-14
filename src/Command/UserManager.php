@@ -248,7 +248,6 @@ class UserManager extends Command
 
         # Add options
         $userRolesDisplay = $userRoles;
-        unset($userRolesDisplay[0]);
         $userRolesDisplay[] = "Cancel";
         $userRolesDisplay[] = "Exit";
 

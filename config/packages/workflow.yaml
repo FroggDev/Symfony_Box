@@ -26,3 +26,11 @@ framework:
                     guard: "has_role('ROLE_MANAGER')"
                     from: products_validation
                     to: sent
+                cancel_products_request:
+                    guard: "has_role('ROLE_MARKETING')"
+                    from: products_request
+                    to: box_creation
+                cancel_products_validation:
+                    guard: "has_role('ROLE_MANAGER')"
+                    from: products_validation
+                    to: products_request

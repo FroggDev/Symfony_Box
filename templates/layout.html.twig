@@ -31,14 +31,11 @@
         header {
             background-image: url({{ asset('images/bandeau.jpg') }});
             background-repeat: no-repeat;
-            background-size: auto;
             padding-bottom: 10px;
+            background-size: cover;
         }
         header .row {margin-bottom: 0px !important;}
-    </style>
 
-    <!-- ONLY WORK FLOW -->
-    <style>
         #workflow{
             display: table;
             margin: auto;
@@ -84,6 +81,25 @@
         .round{border-radius: 50px;}
 
 
+
+         #workflowDescription IMG{
+             height :50px;
+         }
+
+        #workflowDescription .imgContainer{
+            float:left;
+        }
+
+        NAV .userstatus{
+            float:right;
+        }
+
+        .row {
+         margin-right:0 !important;
+         margin-left:0 !important;
+        }
+
+
     </style>
 
 {% endblock %}
@@ -95,7 +111,7 @@
     {% include 'components/menu.html.twig' %}
 
     {# Content #}
-    <section id="content" style="height: calc( 100% - 275px);">
+    <section id="content">
     {% block content '' %}
     </section>
 
