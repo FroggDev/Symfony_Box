@@ -95,3 +95,32 @@ php bin/console cache:warmup
 
 - pour decharger le cache :
 php bin/console cache:clear
+
+- mails : https://mailtrap.io
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

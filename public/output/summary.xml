@@ -1,64 +1,108 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<metrics generated="2018-03-13T08:46:20" pdepend="@package_version@" ahh="1.4" andc="0" calls="217" ccn="135" ccn2="138" cloc="698" clsa="0" clsc="17" eloc="992" fanout="61" leafs="10" lloc="546" loc="1979" maxDIT="2" ncloc="1281" noc="17" nof="0" noi="0" nom="88" nop="11" roots="7">
+<metrics generated="2018-03-15T09:23:58" pdepend="@package_version@" ahh="0.94736842105263" andc="0" calls="355" ccn="252" ccn2="262" cloc="1290" clsa="0" clsc="29" eloc="1775" fanout="114" leafs="20" lloc="970" loc="3609" maxDIT="2" ncloc="2319" noc="29" nof="0" noi="0" nom="152" nop="18" roots="9">
   <files>
-    <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Command\UserManager.php" loc="305" cloc="89" eloc="167" lloc="112" ncloc="216"/>
-    <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Common\Traits\MailerTrait.php" loc="54" cloc="28" eloc="21" lloc="5" ncloc="26"/>
-    <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Controller\BoxController.php" loc="82" cloc="27" eloc="38" lloc="25" ncloc="55"/>
-    <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Controller\IndexController.php" loc="30" cloc="20" eloc="8" lloc="4" ncloc="10"/>
-    <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Controller\LoggedController.php" loc="121" cloc="55" eloc="54" lloc="37" ncloc="66"/>
-    <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Controller\LoginController.php" loc="313" cloc="110" eloc="149" lloc="94" ncloc="203"/>
+    <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Cache\ProductCacheWarmer.php" loc="52" cloc="20" eloc="25" lloc="13" ncloc="32"/>
+    <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Command\UserManager.php" loc="306" cloc="89" eloc="168" lloc="111" ncloc="217"/>
+    <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Common\Traits\Html\ATagGeneratorTrait.php" loc="36" cloc="13" eloc="19" lloc="7" ncloc="23"/>
+    <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Common\Traits\Html\ImgTagGeneratorTrait.php" loc="37" cloc="12" eloc="19" lloc="8" ncloc="25"/>
+    <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Common\Traits\MailerTrait.php" loc="63" cloc="29" eloc="27" lloc="9" ncloc="34"/>
+    <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Common\Traits\String\MaxLengthTrait.php" loc="28" cloc="10" eloc="14" lloc="7" ncloc="18"/>
+    <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Common\Traits\String\SlugifyTrait.php" loc="40" cloc="14" eloc="18" lloc="11" ncloc="26"/>
+    <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Controller\BoxController.php" loc="323" cloc="116" eloc="151" lloc="90" ncloc="207"/>
+    <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Controller\IndexController.php" loc="73" cloc="56" eloc="14" lloc="8" ncloc="17"/>
+    <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Controller\LoggedController.php" loc="68" cloc="23" eloc="37" lloc="28" ncloc="45"/>
+    <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Controller\LoginController.php" loc="314" cloc="110" eloc="149" lloc="94" ncloc="204"/>
+    <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Controller\WorkflowController.php" loc="77" cloc="34" eloc="33" lloc="21" ncloc="43"/>
+    <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Entity\Box.php" loc="225" cloc="96" eloc="95" lloc="58" ncloc="129"/>
+    <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Entity\Product.php" loc="136" cloc="55" eloc="56" lloc="32" ncloc="81"/>
     <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Entity\User.php" loc="561" cloc="257" eloc="225" lloc="133" ncloc="304"/>
-    <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Exception\UndefinedRoleException.php" loc="10" cloc="4" eloc="5" lloc="1" ncloc="6"/>
+    <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Exception\UndefinedRoleException.php" loc="11" cloc="4" eloc="5" lloc="1" ncloc="7"/>
+    <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Form\Admin\BoxCreateType.php" loc="73" cloc="10" eloc="59" lloc="14" ncloc="63"/>
     <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Form\Security\UserPasswordType.php" loc="57" cloc="10" eloc="41" lloc="14" ncloc="47"/>
     <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Form\Security\UserRecoverType.php" loc="55" cloc="10" eloc="41" lloc="14" ncloc="45"/>
-    <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Form\Security\UserType.php" loc="80" cloc="9" eloc="66" lloc="13" ncloc="71"/>
+    <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Form\Security\UserType.php" loc="81" cloc="9" eloc="66" lloc="13" ncloc="72"/>
     <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Form\User\BoxSubscribeType.php" loc="49" cloc="10" eloc="35" lloc="11" ncloc="39"/>
     <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Kernel.php" loc="60" cloc="2" eloc="46" lloc="30" ncloc="58"/>
-    <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\SiteConfig.php" loc="26" cloc="10" eloc="9" lloc="5" ncloc="16"/>
-    <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Migrations\Version20180312114316.php" loc="29" cloc="5" eloc="17" lloc="10" ncloc="24"/>
-    <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Migrations\Version20180312154350.php" loc="29" cloc="5" eloc="17" lloc="10" ncloc="24"/>
-    <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Repository\UserRepository.php" loc="47" cloc="12" eloc="24" lloc="12" ncloc="35"/>
-    <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Subscriber\UserSubscriber.php" loc="71" cloc="35" eloc="29" lloc="16" ncloc="36"/>
+    <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\SiteConfig.php" loc="97" cloc="63" eloc="16" lloc="12" ncloc="34"/>
+    <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Migrations\Version20180315085243.php" loc="34" cloc="5" eloc="22" lloc="15" ncloc="29"/>
+    <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Repository\BoxRepository.php" loc="45" cloc="12" eloc="24" lloc="12" ncloc="33"/>
+    <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Repository\ProductRepository.php" loc="124" cloc="25" eloc="77" lloc="47" ncloc="99"/>
+    <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Repository\UserRepository.php" loc="45" cloc="12" eloc="24" lloc="12" ncloc="33"/>
+    <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Service\Twig\AppExtension.php" loc="56" cloc="20" eloc="30" lloc="13" ncloc="36"/>
+    <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Service\Twig\AppRuntime.php" loc="33" cloc="11" eloc="17" lloc="9" ncloc="22"/>
+    <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Service\Twig\Common\StringAppRuntime.php" loc="23" cloc="8" eloc="10" lloc="4" ncloc="15"/>
+    <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Service\Twig\Entity\BoxAppRuntime.php" loc="131" cloc="47" eloc="62" lloc="32" ncloc="84"/>
+    <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Service\Twig\Entity\WorkflowAppRuntime.php" loc="97" cloc="23" eloc="54" lloc="29" ncloc="74"/>
+    <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Subscriber\UserSubscriber.php" loc="72" cloc="35" eloc="29" lloc="16" ncloc="37"/>
+    <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Subscriber\WorkflowSubscriber.php" loc="127" cloc="40" eloc="67" lloc="42" ncloc="87"/>
   </files>
+  <package name="App\Cache" noc="1" noi="0" nom="2" nof="0" cr="0.15" rcr="0.2775">
+    <class name="ProductCacheWarmer" fqname="App\Cache\ProductCacheWarmer" start="13" end="51" loc="39" cloc="16" eloc="14" lloc="6" ncloc="23" dit="2" noam="2" nocc="0" noom="0" nom="2" cr="0.15" rcr="0.2775" ca="0" cbo="3" ce="3" impl="0" cis="2" csz="2" npm="2" vars="0" varsi="0" varsnp="0" wmc="3" wmci="3" wmcnp="3">
+      <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Cache\ProductCacheWarmer.php"/>
+      <method name="isOptional" start="26" end="29" ccn="1" ccn2="1" loc="4" cloc="1" eloc="2" lloc="0" ncloc="3" npath="1" hnt="2" hnd="2" hv="2" hd="2" hl="0.5" he="4" ht="0.22222222222222" hb="0.00083994736659658" hi="1" mi="91.191023588314"/>
+      <method name="warmUp" start="36" end="50" ccn="2" ccn2="2" loc="15" cloc="0" eloc="12" lloc="6" ncloc="15" npath="2" hnt="28" hnd="46" hv="154.6597347696" hd="7.15" hl="0.13986013986014" he="1105.8171036026" ht="61.434283533479" hb="0.035645191083926" hi="21.630732135608" mi="60.859724890827"/>
+    </class>
+  </package>
   <package name="App\Command" noc="1" noi="0" nom="9" nof="0" cr="0.15" rcr="0.2775">
-    <class name="UserManager" fqname="App\Command\UserManager" start="40" end="305" loc="266" cloc="64" eloc="144" lloc="93" ncloc="202" dit="2" noam="9" nocc="0" noom="0" nom="9" cr="0.15" rcr="0.2775" ca="0" cbo="7" ce="7" impl="0" cis="1" csz="11" npm="1" vars="2" varsi="2" varsnp="0" wmc="29" wmci="29" wmcnp="1">
+    <class name="UserManager" fqname="App\Command\UserManager" start="40" end="305" loc="266" cloc="64" eloc="145" lloc="92" ncloc="202" dit="2" noam="9" nocc="0" noom="0" nom="9" cr="0.15" rcr="0.2775" ca="0" cbo="7" ce="7" impl="0" cis="1" csz="11" npm="1" vars="2" varsi="2" varsnp="0" wmc="29" wmci="29" wmcnp="1">
       <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Command\UserManager.php"/>
-      <method name="__construct" start="50" end="55" ccn="1" ccn2="1" loc="6" cloc="0" eloc="4" lloc="2" ncloc="6" npath="1" hnt="10" hnd="11" hv="34.594316186373" hd="5.25" hl="0.19047619047619" he="181.62015997846" ht="10.090008887692" hb="0.010690256224877" hi="6.5893935593091" mi="75.956050577813"/>
-      <method name="configure" start="60" end="70" ccn="1" ccn2="1" loc="11" cloc="4" eloc="6" lloc="1" ncloc="7" npath="1" hnt="8" hnd="10" hv="26.575424759099" hd="3" hl="0.33333333333333" he="79.726274277297" ht="4.4292374598498" hb="0.0061746601349011" hi="8.8584749196996" mi="72.91670449091"/>
-      <method name="execute" start="78" end="89" ccn="1" ccn2="1" loc="12" cloc="3" eloc="5" lloc="3" ncloc="9" npath="1" hnt="13" hnd="17" hv="53.137016936254" hd="4.2857142857143" hl="0.23333333333333" he="227.73007258395" ht="12.651670699108" hb="0.012430606964582" hi="12.398637285126" mi="72.536936867786"/>
-      <method name="displayMainMenu" start="94" end="131" ccn="7" ccn2="7" loc="38" cloc="3" eloc="33" lloc="21" ncloc="35" npath="7" hnt="28" hnd="73" hv="173.31508764864" hd="14.130434782609" hl="0.070769230769231" he="2449.0175428612" ht="136.05653015896" hb="0.060562901842531" hi="12.265375433596" mi="50.257309347647"/>
-      <method name="displayUserList" start="136" end="155" ccn="2" ccn2="2" loc="20" cloc="3" eloc="13" lloc="5" ncloc="17" npath="2" hnt="25" hnd="51" hv="141.81063354929" hd="7.5789473684211" hl="0.13194444444444" he="1074.7753279525" ht="59.709740441805" hb="0.034974958208067" hi="18.711125259975" mi="60.365180633704"/>
-      <method name="enableUser" start="160" end="175" ccn="2" ccn2="2" loc="16" cloc="3" eloc="9" lloc="6" ncloc="13" npath="2" hnt="17" hnd="28" hv="81.725033674979" hd="9.5" hl="0.10526315789474" he="776.3878199123" ht="43.132656661795" hb="0.028157746038631" hi="8.602635123682" mi="65.524846754917"/>
-      <method name="addUserRole" start="180" end="233" ccn="7" ccn2="7" loc="54" cloc="8" eloc="36" lloc="27" ncloc="46" npath="32" hnt="44" hnd="120" hv="303.90318620677" hd="17.341463414634" hl="0.057665260196906" he="5270.1259851955" ht="292.78477695531" hb="0.10094684349215" hi="17.524656307282" mi="47.725207858982"/>
-      <method name="removeUserRole" start="239" end="282" ccn="6" ccn2="6" loc="44" cloc="6" eloc="28" lloc="21" ncloc="38" npath="32" hnt="41" hnd="118" hv="282.18836502384" hd="13.454545454545" hl="0.074324324324324" he="3796.7161839571" ht="210.9286768865" hb="0.081124276068394" hi="20.973459562582" mi="50.466022180241"/>
+      <method name="__construct" start="50" end="54" ccn="1" ccn2="1" loc="5" cloc="0" eloc="4" lloc="2" ncloc="5" npath="1" hnt="10" hnd="11" hv="34.594316186373" hd="5.25" hl="0.19047619047619" he="181.62015997846" ht="10.090008887692" hb="0.010690256224877" hi="6.5893935593091" mi="75.956050577813"/>
+      <method name="configure" start="59" end="69" ccn="1" ccn2="1" loc="11" cloc="4" eloc="6" lloc="1" ncloc="7" npath="1" hnt="8" hnd="10" hv="26.575424759099" hd="3" hl="0.33333333333333" he="79.726274277297" ht="4.4292374598498" hb="0.0061746601349011" hi="8.8584749196996" mi="72.91670449091"/>
+      <method name="execute" start="77" end="88" ccn="1" ccn2="1" loc="12" cloc="3" eloc="5" lloc="3" ncloc="9" npath="1" hnt="13" hnd="17" hv="53.137016936254" hd="4.2857142857143" hl="0.23333333333333" he="227.73007258395" ht="12.651670699108" hb="0.012430606964582" hi="12.398637285126" mi="72.536936867786"/>
+      <method name="displayMainMenu" start="93" end="132" ccn="7" ccn2="7" loc="40" cloc="3" eloc="35" lloc="21" ncloc="37" npath="7" hnt="28" hnd="73" hv="173.31508764864" hd="14.130434782609" hl="0.070769230769231" he="2449.0175428612" ht="136.05653015896" hb="0.060562901842531" hi="12.265375433596" mi="50.257309347647"/>
+      <method name="displayUserList" start="137" end="156" ccn="2" ccn2="2" loc="20" cloc="3" eloc="13" lloc="5" ncloc="17" npath="2" hnt="25" hnd="51" hv="141.81063354929" hd="7.5789473684211" hl="0.13194444444444" he="1074.7753279525" ht="59.709740441805" hb="0.034974958208067" hi="18.711125259975" mi="60.365180633704"/>
+      <method name="enableUser" start="161" end="176" ccn="2" ccn2="2" loc="16" cloc="3" eloc="9" lloc="6" ncloc="13" npath="2" hnt="17" hnd="28" hv="81.725033674979" hd="9.5" hl="0.10526315789474" he="776.3878199123" ht="43.132656661795" hb="0.028157746038631" hi="8.602635123682" mi="65.524846754917"/>
+      <method name="addUserRole" start="181" end="234" ccn="7" ccn2="7" loc="54" cloc="8" eloc="36" lloc="27" ncloc="46" npath="32" hnt="44" hnd="120" hv="303.90318620677" hd="17.341463414634" hl="0.057665260196906" he="5270.1259851955" ht="292.78477695531" hb="0.10094684349215" hi="17.524656307282" mi="47.725207858982"/>
+      <method name="removeUserRole" start="240" end="282" ccn="6" ccn2="6" loc="43" cloc="6" eloc="27" lloc="20" ncloc="37" npath="32" hnt="41" hnd="118" hv="282.18836502384" hd="13.454545454545" hl="0.074324324324324" he="3796.7161839571" ht="210.9286768865" hb="0.081124276068394" hi="20.973459562582" mi="50.466022180241"/>
       <method name="getUserId" start="288" end="304" ccn="2" ccn2="2" loc="17" cloc="2" eloc="10" lloc="7" ncloc="15" npath="2" hnt="24" hnd="43" hv="130.23035411285" hd="7.6388888888889" hl="0.13090909090909" he="994.81520502872" ht="55.267511390484" hb="0.03321801587385" hi="17.048337265682" mi="63.10978733364"/>
     </class>
   </package>
-  <package name="App\Common\Traits" noc="0" noi="0" nom="0" nof="0">
-    <trait name="MailerTrait" fqname="App\Common\Traits\MailerTrait" start="8" end="53" ca="0" cbo="1" ce="1" impl="0" cis="1" csz="1" npm="1" vars="0" varsi="0" varsnp="0" wmc="1" wmci="1" wmcnp="1">
-      <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Common\Traits\MailerTrait.php"/>
-      <method name="send" start="25" end="52" ccn="1" ccn2="1" loc="28" cloc="11" eloc="14" lloc="2" ncloc="17" npath="1" hnt="19" hnd="29" hv="92.301638907424" hd="5.6666666666667" hl="0.17647058823529" he="523.0426204754" ht="29.057923359745" hb="0.021638980622468" hi="16.288524513075" mi="61.103479176839"/>
+  <package name="App\Common\Traits\Html" noc="0" noi="0" nom="0" nof="0">
+    <trait name="ATagGeneratorTrait" fqname="App\Common\Traits\Html\ATagGeneratorTrait" start="9" end="35" ca="0" cbo="0" ce="0" impl="0" cis="1" csz="1" npm="1" vars="0" varsi="0" varsnp="0" wmc="4" wmci="4" wmcnp="4">
+      <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Common\Traits\Html\ATagGeneratorTrait.php"/>
+      <method name="getATag" start="20" end="34" ccn="4" ccn2="4" loc="15" cloc="0" eloc="7" lloc="5" ncloc="15" npath="8" hnt="26" hnd="53" hv="148.92593181864" hd="3.3103448275862" hl="0.30208333333333" he="492.9961880893" ht="27.388677116072" hb="0.020802129042748" hi="44.988041903548" mi="65.811883255501"/>
+    </trait>
+    <trait name="ImgTagGeneratorTrait" fqname="App\Common\Traits\Html\ImgTagGeneratorTrait" start="9" end="36" ca="0" cbo="0" ce="0" impl="0" cis="1" csz="1" npm="1" vars="0" varsi="0" varsnp="0" wmc="5" wmci="5" wmcnp="5">
+      <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Common\Traits\Html\ImgTagGeneratorTrait.php"/>
+      <method name="getImgTag" start="19" end="35" ccn="5" ccn2="5" loc="17" cloc="0" eloc="8" lloc="6" ncloc="17" npath="16" hnt="25" hnd="63" hv="149.4319980875" hd="3.4117647058824" hl="0.29310344827586" he="509.8268170044" ht="28.3237120558" hb="0.02127292435422" hi="43.799033922198" mi="64.402030177826"/>
     </trait>
   </package>
-  <package name="App\Controller" noc="4" noi="0" nom="14" nof="0" cr="0.15" rcr="0.2775">
-    <class name="BoxController" fqname="App\Controller\BoxController" start="16" end="82" loc="67" cloc="23" eloc="23" lloc="14" ncloc="44" dit="2" noam="2" nocc="0" noom="0" nom="2" cr="0.15" rcr="0.181875" ca="0" cbo="5" ce="5" impl="0" cis="2" csz="2" npm="2" vars="0" varsi="0" varsnp="0" wmc="5" wmci="5" wmcnp="5">
+  <package name="App\Common\Traits" noc="0" noi="0" nom="0" nof="0">
+    <trait name="MailerTrait" fqname="App\Common\Traits\MailerTrait" start="8" end="62" ca="0" cbo="1" ce="1" impl="0" cis="1" csz="1" npm="1" vars="0" varsi="0" varsnp="0" wmc="2" wmci="2" wmcnp="2">
+      <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Common\Traits\MailerTrait.php"/>
+      <method name="send" start="27" end="61" ccn="2" ccn2="2" loc="35" cloc="12" eloc="19" lloc="5" ncloc="23" npath="2" hnt="19" hnd="29" hv="92.301638907424" hd="5.6666666666667" hl="0.17647058823529" he="523.0426204754" ht="29.057923359745" hb="0.021638980622468" hi="16.288524513075" mi="61.103479176839"/>
+    </trait>
+  </package>
+  <package name="App\Common\Traits\String" noc="0" noi="0" nom="0" nof="0">
+    <trait name="MaxLengthTrait" fqname="App\Common\Traits\String\MaxLengthTrait" start="8" end="27" ca="0" cbo="0" ce="0" impl="0" cis="1" csz="1" npm="1" vars="0" varsi="0" varsnp="0" wmc="3" wmci="3" wmcnp="3">
+      <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Common\Traits\String\MaxLengthTrait.php"/>
+      <method name="maxLength" start="16" end="26" ccn="3" ccn2="3" loc="11" cloc="0" eloc="8" lloc="5" ncloc="11" npath="4" hnt="22" hnd="46" hv="121.51836303325" hd="5.4545454545455" hl="0.18333333333333" he="662.82743472684" ht="36.823746373713" hb="0.025340337556708" hi="22.278366556097" mi="65.299828660886"/>
+    </trait>
+    <trait name="SlugifyTrait" fqname="App\Common\Traits\String\SlugifyTrait" start="8" end="39" ca="0" cbo="0" ce="0" impl="0" cis="1" csz="1" npm="1" vars="0" varsi="0" varsnp="0" wmc="2" wmci="2" wmcnp="2">
+      <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Common\Traits\String\SlugifyTrait.php"/>
+      <method name="slugify" start="14" end="38" ccn="2" ccn2="2" loc="25" cloc="6" eloc="12" lloc="9" ncloc="19" npath="2" hnt="22" hnd="67" hv="133.45396219007" hd="5.55" hl="0.18018018018018" he="740.66949015489" ht="41.148305008605" hb="0.027287372254746" hi="24.045758953166" mi="61.308174345604"/>
+    </trait>
+  </package>
+  <package name="App\Controller" noc="5" noi="0" nom="17" nof="0" cr="0.15" rcr="0.2775">
+    <class name="BoxController" fqname="App\Controller\BoxController" start="22" end="322" loc="301" cloc="112" eloc="127" lloc="70" ncloc="189" dit="2" noam="6" nocc="0" noom="0" nom="6" cr="0.15" rcr="0.1755" ca="0" cbo="11" ce="11" impl="0" cis="4" csz="6" npm="4" vars="0" varsi="0" varsnp="0" wmc="27" wmci="27" wmcnp="21">
       <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Controller\BoxController.php"/>
-      <method name="__construct" start="25" end="28" ccn="1" ccn2="1" loc="4" cloc="0" eloc="3" lloc="1" ncloc="4" npath="1" hnt="6" hnd="6" hv="15.509775004327" hd="4" hl="0.25" he="62.039100017308" ht="3.4466166676282" hb="0.0052238304343202" hi="3.8774437510817" mi="81.120955834208"/>
-      <method name="boxSubscribe" start="37" end="81" ccn="3" ccn2="4" loc="45" cloc="12" eloc="20" lloc="13" ncloc="33" npath="4" hnt="44" hnd="94" hv="288.40190947382" hd="10.013513513514" hl="0.099865047233468" he="2887.9164178392" ht="160.43980099106" hb="0.067598204154455" hi="28.801270311825" mi="53.856427503866"/>
+      <method name="__construct" start="31" end="34" ccn="1" ccn2="1" loc="4" cloc="0" eloc="3" lloc="1" ncloc="4" npath="1" hnt="6" hnd="6" hv="15.509775004327" hd="4" hl="0.25" he="62.039100017308" ht="3.4466166676282" hb="0.0052238304343202" hi="3.8774437510817" mi="81.120955834208"/>
+      <method name="boxSubscribe" start="44" end="86" ccn="3" ccn2="4" loc="43" cloc="12" eloc="20" lloc="13" ncloc="31" npath="4" hnt="44" hnd="94" hv="288.40190947382" hd="10.013513513514" hl="0.099865047233468" he="2887.9164178392" ht="160.43980099106" hb="0.067598204154455" hi="28.801270311825" mi="53.856427503866"/>
+      <method name="boxList" start="98" end="162" ccn="3" ccn2="5" loc="65" cloc="24" eloc="29" lloc="13" ncloc="41" npath="6" hnt="48" hnd="125" hv="334.35764566378" hd="12.22641509434" hl="0.08179012345679" he="4087.9953658515" ht="227.11085365842" hb="0.085222121616665" hi="27.347153117562" mi="49.752227622046"/>
+      <method name="boxEdit" start="173" end="289" ccn="10" ccn2="11" loc="117" cloc="35" eloc="60" lloc="36" ncloc="82" npath="152" hnt="83" hnd="240" hv="656.27191943551" hd="14.742268041237" hl="0.067832167832168" he="9674.9365442554" ht="537.49647468086" hb="0.15134828197934" hi="44.516346982688" mi="40.006682442784"/>
+      <method name="getMyBoxes" start="296" end="311" ccn="3" ccn2="5" loc="16" cloc="0" eloc="12" lloc="6" ncloc="16" npath="5" hnt="21" hnd="47" hv="116.64636588523" hd="9.6666666666667" hl="0.10344827586207" he="1127.5815368906" ht="62.643418716142" hb="0.036111377005479" hi="12.066865436403" mi="61.314005078805"/>
+      <method name="compareProducts" start="318" end="321" ccn="1" ccn2="1" loc="4" cloc="0" eloc="3" lloc="1" ncloc="4" npath="1" hnt="8" hnd="9" hv="25.359400011539" hd="10.5" hl="0.095238095238095" he="266.27370012115" ht="14.792983340064" hb="0.013796351820766" hi="2.4151809534799" mi="79.625791624151"/>
     </class>
-    <class name="IndexController" fqname="App\Controller\IndexController" start="12" end="30" loc="19" cloc="16" eloc="0" lloc="0" ncloc="3" dit="2" noam="0" nocc="0" noom="0" nom="0" cr="0.15" rcr="0.181875" ca="0" cbo="0" ce="0" impl="0" cis="0" csz="0" npm="0" vars="0" varsi="0" varsnp="0" wmc="0" wmci="0" wmcnp="0">
+    <class name="IndexController" fqname="App\Controller\IndexController" start="15" end="72" loc="58" cloc="52" eloc="2" lloc="0" ncloc="6" dit="2" noam="1" nocc="0" noom="0" nom="1" cr="0.15" rcr="0.1755" ca="0" cbo="1" ce="1" impl="0" cis="1" csz="1" npm="1" vars="0" varsi="0" varsnp="0" wmc="1" wmci="1" wmcnp="1">
       <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Controller\IndexController.php"/>
+      <method name="edit" start="24" end="71" ccn="1" ccn2="1" loc="48" cloc="45" eloc="2" lloc="0" ncloc="3" npath="1" hnt="2" hnd="2" hv="2" hd="2" hl="0.5" he="4" ht="0.22222222222222" hb="0.00083994736659658" hi="1" mi="91.191023588314"/>
     </class>
-    <class name="LoggedController" fqname="App\Controller\LoggedController" start="14" end="121" loc="108" cloc="51" eloc="39" lloc="26" ncloc="57" dit="2" noam="6" nocc="0" noom="0" nom="6" cr="0.15" rcr="0.181875" ca="0" cbo="2" ce="2" impl="0" cis="6" csz="6" npm="6" vars="0" varsi="0" varsnp="0" wmc="11" wmci="11" wmcnp="11">
+    <class name="LoggedController" fqname="App\Controller\LoggedController" start="16" end="67" loc="52" cloc="19" eloc="24" lloc="19" ncloc="33" dit="2" noam="2" nocc="0" noom="0" nom="2" cr="0.15" rcr="0.1755" ca="0" cbo="2" ce="2" impl="0" cis="2" csz="2" npm="2" vars="0" varsi="0" varsnp="0" wmc="6" wmci="6" wmcnp="6">
       <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Controller\LoggedController.php"/>
-      <method name="logged" start="24" end="54" ccn="6" ccn2="6" loc="31" cloc="3" eloc="24" lloc="21" ncloc="28" npath="6" hnt="31" hnd="78" hv="194.84746878473" hd="10.714285714286" hl="0.093333333333333" he="2087.651451265" ht="115.98063618139" hb="0.054448268464056" hi="18.185763753241" mi="53.0526311898"/>
-      <method name="indexMarketing" start="63" end="67" ccn="1" ccn2="1" loc="5" cloc="1" eloc="3" lloc="1" ncloc="4" npath="1" hnt="7" hnd="7" hv="19.651484454403" hd="6.25" hl="0.16" he="122.82177784002" ht="6.8234321022233" hb="0.0082362400950509" hi="3.1442375127045" mi="80.401219851729"/>
-      <method name="indexProvider" start="76" end="80" ccn="1" ccn2="1" loc="5" cloc="1" eloc="3" lloc="1" ncloc="4" npath="1" hnt="7" hnd="7" hv="19.651484454403" hd="6.25" hl="0.16" he="122.82177784002" ht="6.8234321022233" hb="0.0082362400950509" hi="3.1442375127045" mi="80.401219851729"/>
-      <method name="indexManager" start="89" end="93" ccn="1" ccn2="1" loc="5" cloc="1" eloc="3" lloc="1" ncloc="4" npath="1" hnt="7" hnd="7" hv="19.651484454403" hd="6.25" hl="0.16" he="122.82177784002" ht="6.8234321022233" hb="0.0082362400950509" hi="3.1442375127045" mi="80.401219851729"/>
-      <method name="indexMember" start="102" end="106" ccn="1" ccn2="1" loc="5" cloc="1" eloc="3" lloc="1" ncloc="4" npath="1" hnt="7" hnd="7" hv="19.651484454403" hd="6.25" hl="0.16" he="122.82177784002" ht="6.8234321022233" hb="0.0082362400950509" hi="3.1442375127045" mi="80.401219851729"/>
-      <method name="indexAdmin" start="115" end="119" ccn="1" ccn2="1" loc="5" cloc="1" eloc="3" lloc="1" ncloc="4" npath="1" hnt="7" hnd="7" hv="19.651484454403" hd="6.25" hl="0.16" he="122.82177784002" ht="6.8234321022233" hb="0.0082362400950509" hi="3.1442375127045" mi="80.401219851729"/>
+      <method name="logged" start="26" end="53" ccn="5" ccn2="5" loc="28" cloc="3" eloc="21" lloc="18" ncloc="25" npath="5" hnt="31" hnd="78" hv="194.84746878473" hd="10.714285714286" hl="0.093333333333333" he="2087.651451265" ht="115.98063618139" hb="0.054448268464056" hi="18.185763753241" mi="53.0526311898"/>
+      <method name="indexMember" start="62" end="66" ccn="1" ccn2="1" loc="5" cloc="1" eloc="3" lloc="1" ncloc="4" npath="1" hnt="7" hnd="7" hv="19.651484454403" hd="6.25" hl="0.16" he="122.82177784002" ht="6.8234321022233" hb="0.0082362400950509" hi="3.1442375127045" mi="80.401219851729"/>
     </class>
-    <class name="LoginController" fqname="App\Controller\LoginController" start="22" end="313" loc="292" cloc="106" eloc="125" lloc="74" ncloc="186" dit="2" noam="6" nocc="0" noom="0" nom="6" cr="0.15" rcr="0.181875" ca="0" cbo="11" ce="11" impl="0" cis="6" csz="6" npm="6" vars="0" varsi="0" varsnp="0" wmc="20" wmci="20" wmcnp="20">
+    <class name="LoginController" fqname="App\Controller\LoginController" start="22" end="313" loc="292" cloc="106" eloc="125" lloc="74" ncloc="186" dit="2" noam="6" nocc="0" noom="0" nom="6" cr="0.15" rcr="0.1755" ca="0" cbo="11" ce="11" impl="0" cis="6" csz="6" npm="6" vars="0" varsi="0" varsnp="0" wmc="20" wmci="20" wmcnp="20">
       <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Controller\LoginController.php"/>
       <method name="__construct" start="31" end="34" ccn="1" ccn2="1" loc="4" cloc="0" eloc="3" lloc="1" ncloc="4" npath="1" hnt="6" hnd="6" hv="15.509775004327" hd="4" hl="0.25" he="62.039100017308" ht="3.4466166676282" hb="0.0052238304343202" hi="3.8774437510817" mi="81.120955834208"/>
       <method name="connexion" start="45" end="63" ccn="2" ccn2="2" loc="19" cloc="4" eloc="11" lloc="5" ncloc="15" npath="2" hnt="22" hnd="38" hv="115.45440529576" hd="6.9" hl="0.14492753623188" he="796.63539654074" ht="44.257522030041" hb="0.028645196877571" hi="16.732522506632" mi="62.573066069434"/>
@@ -67,9 +111,46 @@
       <method name="recoverRequest" start="186" end="233" ccn="3" ccn2="3" loc="48" cloc="14" eloc="22" lloc="16" ncloc="34" npath="3" hnt="49" hnd="115" hv="335.42901249627" hd="9" hl="0.11111111111111" he="3018.8611124665" ht="167.71450624814" hb="0.069626436322516" hi="37.269890277364" mi="52.628642369638"/>
       <method name="recoverValidation" start="246" end="312" ccn="6" ccn2="6" loc="67" cloc="14" eloc="39" lloc="22" ncloc="53" npath="32" hnt="51" hnd="155" hv="371.08234466899" hd="8.4754098360656" hl="0.11798839458414" he="3145.0749539978" ht="174.72638633321" hb="0.07155380701893" hi="43.783410106012" mi="46.494091566153"/>
     </class>
+    <class name="WorkflowController" fqname="App\Controller\WorkflowController" start="17" end="76" loc="60" cloc="30" eloc="18" lloc="10" ncloc="30" dit="2" noam="2" nocc="0" noom="0" nom="2" cr="0.15" rcr="0.1755" ca="0" cbo="5" ce="5" impl="0" cis="2" csz="2" npm="2" vars="0" varsi="0" varsnp="0" wmc="5" wmci="5" wmcnp="5">
+      <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Controller\WorkflowController.php"/>
+      <method name="boxWorkflow" start="28" end="32" ccn="1" ccn2="1" loc="5" cloc="1" eloc="3" lloc="1" ncloc="4" npath="1" hnt="14" hnd="16" hv="56" hd="6.6666666666667" hl="0.15" he="373.33333333333" ht="20.740740740741" hb="0.01728263364451" hi="8.4" mi="77.216755632605"/>
+      <method name="workflowAction" start="42" end="75" ccn="4" ccn2="4" loc="34" cloc="13" eloc="15" lloc="9" ncloc="21" npath="6" hnt="30" hnd="56" hv="174.22064766173" hd="11.666666666667" hl="0.085714285714286" he="2032.5742227202" ht="112.92079015112" hb="0.053486357272527" hi="14.933198371005" mi="58.114566839521"/>
+    </class>
   </package>
-  <package name="App\Entity" noc="1" noi="0" nom="43" nof="0" cr="0.15" rcr="0.2775">
-    <class name="User" fqname="App\Entity\User" start="13" end="561" loc="549" cloc="252" eloc="156" lloc="68" ncloc="297" dit="0" noam="0" nocc="0" noom="0" nom="43" cr="0.15" rcr="0.2775" ca="8" cbo="2" ce="2" impl="1" cis="42" csz="56" npm="42" vars="13" varsi="13" varsnp="0" wmc="45" wmci="45" wmcnp="44">
+  <package name="App\Entity" noc="3" noi="0" nom="69" nof="0" cr="0.15" rcr="0.2775">
+    <class name="Box" fqname="App\Entity\Box" start="16" end="224" loc="209" cloc="91" eloc="60" lloc="27" ncloc="118" dit="0" noam="0" nocc="0" noom="0" nom="16" cr="0.15" rcr="0.15" ca="8" cbo="1" ce="1" impl="0" cis="16" csz="23" npm="16" vars="7" varsi="7" varsnp="0" wmc="17" wmci="17" wmcnp="17">
+      <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Entity\Box.php"/>
+      <method name="__construct" start="74" end="82" ccn="1" ccn2="1" loc="9" cloc="3" eloc="5" lloc="3" ncloc="6" npath="1" hnt="12" hnd="16" hv="48" hd="7.7" hl="0.12987012987013" he="369.6" ht="20.533333333333" hb="0.017167223199142" hi="6.2337662337662" mi="72.84611728763"/>
+      <method name="getId" start="88" end="91" ccn="1" ccn2="1" loc="4" cloc="0" eloc="3" lloc="1" ncloc="4" npath="1" hnt="5" hnd="5" hv="11.609640474437" hd="8" hl="0.125" he="92.877123795494" ht="5.1598402108608" hb="0.0068362496969366" hi="1.4512050593046" mi="82.001716149821"/>
+      <method name="setId" start="97" end="101" ccn="1" ccn2="1" loc="5" cloc="0" eloc="4" lloc="2" ncloc="5" npath="1" hnt="8" hnd="9" hv="25.359400011539" hd="5" hl="0.2" he="126.79700005769" ht="7.0442777809829" hb="0.0084130098545288" hi="5.0718800023077" mi="76.900382516713"/>
+      <method name="getName" start="106" end="109" ccn="1" ccn2="1" loc="4" cloc="0" eloc="3" lloc="1" ncloc="4" npath="1" hnt="5" hnd="5" hv="11.609640474437" hd="8" hl="0.125" he="92.877123795494" ht="5.1598402108608" hb="0.0068362496969366" hi="1.4512050593046" mi="82.001716149821"/>
+      <method name="setName" start="115" end="119" ccn="1" ccn2="1" loc="5" cloc="0" eloc="4" lloc="2" ncloc="5" npath="1" hnt="8" hnd="9" hv="25.359400011539" hd="5" hl="0.2" he="126.79700005769" ht="7.0442777809829" hb="0.0084130098545288" hi="5.0718800023077" mi="76.900382516713"/>
+      <method name="getNameSlugified" start="125" end="128" ccn="1" ccn2="1" loc="4" cloc="0" eloc="3" lloc="1" ncloc="4" npath="1" hnt="7" hnd="7" hv="19.651484454403" hd="6.25" hl="0.16" he="122.82177784002" ht="6.8234321022233" hb="0.0082362400950509" hi="3.1442375127045" mi="80.401219851729"/>
+      <method name="getWorkflowStatus" start="133" end="136" ccn="1" ccn2="1" loc="4" cloc="0" eloc="3" lloc="1" ncloc="4" npath="1" hnt="5" hnd="5" hv="11.609640474437" hd="8" hl="0.125" he="92.877123795494" ht="5.1598402108608" hb="0.0068362496969366" hi="1.4512050593046" mi="82.001716149821"/>
+      <method name="setWorkflowStatus" start="142" end="146" ccn="1" ccn2="1" loc="5" cloc="0" eloc="4" lloc="2" ncloc="5" npath="1" hnt="8" hnd="9" hv="25.359400011539" hd="5" hl="0.2" he="126.79700005769" ht="7.0442777809829" hb="0.0084130098545288" hi="5.0718800023077" mi="76.900382516713"/>
+      <method name="getProducts" start="151" end="154" ccn="1" ccn2="1" loc="4" cloc="0" eloc="3" lloc="1" ncloc="4" npath="1" hnt="5" hnd="5" hv="11.609640474437" hd="8" hl="0.125" he="92.877123795494" ht="5.1598402108608" hb="0.0068362496969366" hi="1.4512050593046" mi="82.001716149821"/>
+      <method name="setProducts" start="160" end="164" ccn="1" ccn2="1" loc="5" cloc="0" eloc="4" lloc="2" ncloc="5" npath="1" hnt="8" hnd="9" hv="25.359400011539" hd="5" hl="0.2" he="126.79700005769" ht="7.0442777809829" hb="0.0084130098545288" hi="5.0718800023077" mi="76.900382516713"/>
+      <method name="getFeaturedImage" start="169" end="172" ccn="1" ccn2="1" loc="4" cloc="0" eloc="3" lloc="1" ncloc="4" npath="1" hnt="5" hnd="5" hv="11.609640474437" hd="8" hl="0.125" he="92.877123795494" ht="5.1598402108608" hb="0.0068362496969366" hi="1.4512050593046" mi="82.001716149821"/>
+      <method name="setFeaturedImage" start="178" end="182" ccn="1" ccn2="1" loc="5" cloc="0" eloc="4" lloc="2" ncloc="5" npath="1" hnt="8" hnd="9" hv="25.359400011539" hd="5" hl="0.2" he="126.79700005769" ht="7.0442777809829" hb="0.0084130098545288" hi="5.0718800023077" mi="76.900382516713"/>
+      <method name="getDateCreation" start="187" end="190" ccn="1" ccn2="1" loc="4" cloc="0" eloc="3" lloc="1" ncloc="4" npath="1" hnt="7" hnd="7" hv="19.651484454403" hd="6.25" hl="0.16" he="122.82177784002" ht="6.8234321022233" hb="0.0082362400950509" hi="3.1442375127045" mi="80.401219851729"/>
+      <method name="getDescription" start="195" end="198" ccn="1" ccn2="1" loc="4" cloc="0" eloc="3" lloc="1" ncloc="4" npath="1" hnt="5" hnd="5" hv="11.609640474437" hd="8" hl="0.125" he="92.877123795494" ht="5.1598402108608" hb="0.0068362496969366" hi="1.4512050593046" mi="82.001716149821"/>
+      <method name="setDescription" start="204" end="208" ccn="1" ccn2="1" loc="5" cloc="0" eloc="4" lloc="2" ncloc="5" npath="1" hnt="8" hnd="9" hv="25.359400011539" hd="5" hl="0.2" he="126.79700005769" ht="7.0442777809829" hb="0.0084130098545288" hi="5.0718800023077" mi="76.900382516713"/>
+      <method name="getPrice" start="214" end="223" ccn="2" ccn2="2" loc="10" cloc="0" eloc="7" lloc="4" ncloc="10" npath="2" hnt="14" hnd="19" hv="59.47098518821" hd="7.7142857142857" hl="0.12962962962963" he="458.77617145191" ht="25.487565080662" hb="0.019828018426675" hi="7.7092017836569" mi="68.872348027348"/>
+    </class>
+    <class name="Product" fqname="App\Entity\Product" start="10" end="135" loc="126" cloc="52" eloc="35" lloc="15" ncloc="74" dit="0" noam="0" nocc="0" noom="0" nom="10" cr="0.15" rcr="0.15" ca="2" cbo="2" ce="2" impl="0" cis="10" csz="15" npm="10" vars="5" varsi="5" varsnp="0" wmc="10" wmci="10" wmcnp="10">
+      <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Entity\Product.php"/>
+      <method name="getBox" start="43" end="46" ccn="1" ccn2="1" loc="4" cloc="0" eloc="3" lloc="1" ncloc="4" npath="1" hnt="5" hnd="5" hv="11.609640474437" hd="8" hl="0.125" he="92.877123795494" ht="5.1598402108608" hb="0.0068362496969366" hi="1.4512050593046" mi="82.001716149821"/>
+      <method name="setBox" start="52" end="56" ccn="1" ccn2="1" loc="5" cloc="0" eloc="4" lloc="2" ncloc="5" npath="1" hnt="8" hnd="9" hv="25.359400011539" hd="5" hl="0.2" he="126.79700005769" ht="7.0442777809829" hb="0.0084130098545288" hi="5.0718800023077" mi="76.900382516713"/>
+      <method name="getId" start="61" end="64" ccn="1" ccn2="1" loc="4" cloc="0" eloc="3" lloc="1" ncloc="4" npath="1" hnt="5" hnd="5" hv="11.609640474437" hd="8" hl="0.125" he="92.877123795494" ht="5.1598402108608" hb="0.0068362496969366" hi="1.4512050593046" mi="82.001716149821"/>
+      <method name="setId" start="70" end="74" ccn="1" ccn2="1" loc="5" cloc="0" eloc="4" lloc="2" ncloc="5" npath="1" hnt="8" hnd="9" hv="25.359400011539" hd="5" hl="0.2" he="126.79700005769" ht="7.0442777809829" hb="0.0084130098545288" hi="5.0718800023077" mi="76.900382516713"/>
+      <method name="getTitle" start="80" end="83" ccn="1" ccn2="1" loc="4" cloc="0" eloc="3" lloc="1" ncloc="4" npath="1" hnt="5" hnd="5" hv="11.609640474437" hd="8" hl="0.125" he="92.877123795494" ht="5.1598402108608" hb="0.0068362496969366" hi="1.4512050593046" mi="82.001716149821"/>
+      <method name="setTitle" start="90" end="94" ccn="1" ccn2="1" loc="5" cloc="0" eloc="4" lloc="2" ncloc="5" npath="1" hnt="8" hnd="9" hv="25.359400011539" hd="5" hl="0.2" he="126.79700005769" ht="7.0442777809829" hb="0.0084130098545288" hi="5.0718800023077" mi="76.900382516713"/>
+      <method name="getDescription" start="100" end="103" ccn="1" ccn2="1" loc="4" cloc="0" eloc="3" lloc="1" ncloc="4" npath="1" hnt="5" hnd="5" hv="11.609640474437" hd="8" hl="0.125" he="92.877123795494" ht="5.1598402108608" hb="0.0068362496969366" hi="1.4512050593046" mi="82.001716149821"/>
+      <method name="setDescription" start="110" end="114" ccn="1" ccn2="1" loc="5" cloc="0" eloc="4" lloc="2" ncloc="5" npath="1" hnt="8" hnd="9" hv="25.359400011539" hd="5" hl="0.2" he="126.79700005769" ht="7.0442777809829" hb="0.0084130098545288" hi="5.0718800023077" mi="76.900382516713"/>
+      <method name="getPrice" start="120" end="123" ccn="1" ccn2="1" loc="4" cloc="0" eloc="3" lloc="1" ncloc="4" npath="1" hnt="5" hnd="5" hv="11.609640474437" hd="8" hl="0.125" he="92.877123795494" ht="5.1598402108608" hb="0.0068362496969366" hi="1.4512050593046" mi="82.001716149821"/>
+      <method name="setPrice" start="130" end="134" ccn="1" ccn2="1" loc="5" cloc="0" eloc="4" lloc="2" ncloc="5" npath="1" hnt="8" hnd="9" hv="25.359400011539" hd="5" hl="0.2" he="126.79700005769" ht="7.0442777809829" hb="0.0084130098545288" hi="5.0718800023077" mi="76.900382516713"/>
+    </class>
+    <class name="User" fqname="App\Entity\User" start="13" end="560" loc="548" cloc="252" eloc="156" lloc="68" ncloc="296" dit="0" noam="0" nocc="0" noom="0" nom="43" cr="0.15" rcr="0.2775" ca="8" cbo="2" ce="2" impl="1" cis="42" csz="56" npm="42" vars="13" varsi="13" varsnp="0" wmc="45" wmci="45" wmcnp="44">
       <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Entity\User.php"/>
       <method name="__construct" start="126" end="130" ccn="1" ccn2="1" loc="5" cloc="1" eloc="3" lloc="1" ncloc="4" npath="1" hnt="8" hnd="8" hv="24" hd="9" hl="0.11111111111111" he="216" ht="12" hb="0.012" hi="2.6666666666667" mi="79.793333921501"/>
       <method name="getId" start="136" end="139" ccn="1" ccn2="1" loc="4" cloc="0" eloc="3" lloc="1" ncloc="4" npath="1" hnt="5" hnd="5" hv="11.609640474437" hd="8" hl="0.125" he="92.877123795494" ht="5.1598402108608" hb="0.0068362496969366" hi="1.4512050593046" mi="82.001716149821"/>
@@ -116,33 +197,40 @@
       <method name="setHasSubscribe" start="555" end="559" ccn="1" ccn2="1" loc="5" cloc="0" eloc="4" lloc="2" ncloc="5" npath="1" hnt="8" hnd="9" hv="25.359400011539" hd="5" hl="0.2" he="126.79700005769" ht="7.0442777809829" hb="0.0084130098545288" hi="5.0718800023077" mi="76.900382516713"/>
     </class>
   </package>
-  <package name="App\Exception" noc="1" noi="0" nom="0" nof="0" cr="0.15" rcr="0.2775">
+  <package name="App\Exception" noc="1" noi="0" nom="0" nof="0" cr="0.15" rcr="0.21375">
     <class name="UndefinedRoleException" fqname="App\Exception\UndefinedRoleException" start="8" end="10" loc="3" cloc="0" eloc="0" lloc="0" ncloc="3" dit="2" noam="0" nocc="0" noom="0" nom="0" cr="0.15" rcr="0.2775" ca="1" cbo="0" ce="0" impl="0" cis="0" csz="0" npm="0" vars="0" varsi="0" varsnp="0" wmc="0" wmci="0" wmcnp="0">
       <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Exception\UndefinedRoleException.php"/>
     </class>
   </package>
-  <package name="App\Form\Security" noc="3" noi="0" nom="6" nof="0" cr="0.15" rcr="0.245625">
-    <class name="UserPasswordType" fqname="App\Form\Security\UserPasswordType" start="19" end="56" loc="38" cloc="6" eloc="25" lloc="2" ncloc="32" dit="2" noam="2" nocc="0" noom="0" nom="2" cr="0.15" rcr="0.181875" ca="1" cbo="5" ce="5" impl="0" cis="2" csz="2" npm="2" vars="0" varsi="0" varsnp="0" wmc="2" wmci="2" wmcnp="2">
+  <package name="App\Form\Admin" noc="1" noi="0" nom="2" nof="0" cr="0.15" rcr="0.1755">
+    <class name="BoxCreateType" fqname="App\Form\Admin\BoxCreateType" start="18" end="72" loc="55" cloc="6" eloc="43" lloc="2" ncloc="49" dit="2" noam="2" nocc="0" noom="0" nom="2" cr="0.15" rcr="0.1755" ca="1" cbo="7" ce="7" impl="0" cis="2" csz="2" npm="2" vars="0" varsi="0" varsnp="0" wmc="2" wmci="2" wmcnp="2">
+      <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Form\Admin\BoxCreateType.php"/>
+      <method name="buildForm" start="23" end="61" ccn="1" ccn2="1" loc="39" cloc="0" eloc="38" lloc="1" ncloc="39" npath="1" hnt="35" hnd="79" hv="220.6323261862" hd="4.6323529411765" hl="0.21587301587302" he="1022.0468051272" ht="56.780378062625" hb="0.033821479524057" hi="47.628565652894" mi="48.9937523494"/>
+      <method name="configureOptions" start="66" end="71" ccn="1" ccn2="1" loc="6" cloc="0" eloc="5" lloc="1" ncloc="6" npath="1" hnt="9" hnd="9" hv="28.529325012981" hd="6" hl="0.16666666666667" he="171.17595007788" ht="9.5097750043269" hb="0.010276389970974" hi="4.7548875021635" mi="74.428220343202"/>
+    </class>
+  </package>
+  <package name="App\Form\Security" noc="3" noi="0" nom="6" nof="0" cr="0.15" rcr="0.2265">
+    <class name="UserPasswordType" fqname="App\Form\Security\UserPasswordType" start="19" end="56" loc="38" cloc="6" eloc="25" lloc="2" ncloc="32" dit="2" noam="2" nocc="0" noom="0" nom="2" cr="0.15" rcr="0.1755" ca="1" cbo="5" ce="5" impl="0" cis="2" csz="2" npm="2" vars="0" varsi="0" varsnp="0" wmc="2" wmci="2" wmcnp="2">
       <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Form\Security\UserPasswordType.php"/>
       <method name="buildForm" start="25" end="45" ccn="1" ccn2="1" loc="21" cloc="0" eloc="20" lloc="1" ncloc="21" npath="1" hnt="21" hnd="37" hv="109.39852067821" hd="5.1333333333333" hl="0.19480519480519" he="561.5790728148" ht="31.1988373786" hb="0.022689208999865" hi="21.311400132118" mi="57.207690559109"/>
       <method name="configureOptions" start="50" end="55" ccn="1" ccn2="1" loc="6" cloc="0" eloc="5" lloc="1" ncloc="6" npath="1" hnt="9" hnd="9" hv="28.529325012981" hd="6" hl="0.16666666666667" he="171.17595007788" ht="9.5097750043269" hb="0.010276389970974" hi="4.7548875021635" mi="74.428220343202"/>
     </class>
-    <class name="UserRecoverType" fqname="App\Form\Security\UserRecoverType" start="18" end="54" loc="37" cloc="6" eloc="25" lloc="2" ncloc="31" dit="2" noam="2" nocc="0" noom="0" nom="2" cr="0.15" rcr="0.181875" ca="1" cbo="5" ce="5" impl="0" cis="2" csz="2" npm="2" vars="0" varsi="0" varsnp="0" wmc="2" wmci="2" wmcnp="2">
+    <class name="UserRecoverType" fqname="App\Form\Security\UserRecoverType" start="18" end="54" loc="37" cloc="6" eloc="25" lloc="2" ncloc="31" dit="2" noam="2" nocc="0" noom="0" nom="2" cr="0.15" rcr="0.1755" ca="1" cbo="5" ce="5" impl="0" cis="2" csz="2" npm="2" vars="0" varsi="0" varsnp="0" wmc="2" wmci="2" wmcnp="2">
       <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Form\Security\UserRecoverType.php"/>
       <method name="buildForm" start="23" end="43" ccn="1" ccn2="1" loc="21" cloc="0" eloc="20" lloc="1" ncloc="21" npath="1" hnt="22" hnd="41" hv="117.8661441016" hd="4.9411764705882" hl="0.20238095238095" he="582.39741791378" ht="32.355412106321" hb="0.023246542707622" hi="23.853862496752" mi="56.980981990598"/>
       <method name="configureOptions" start="48" end="53" ccn="1" ccn2="1" loc="6" cloc="0" eloc="5" lloc="1" ncloc="6" npath="1" hnt="9" hnd="9" hv="28.529325012981" hd="6" hl="0.16666666666667" he="171.17595007788" ht="9.5097750043269" hb="0.010276389970974" hi="4.7548875021635" mi="74.428220343202"/>
     </class>
-    <class name="UserType" fqname="App\Form\Security\UserType" start="16" end="80" loc="65" cloc="6" eloc="51" lloc="2" ncloc="59" dit="2" noam="2" nocc="0" noom="0" nom="2" cr="0.15" rcr="0.181875" ca="1" cbo="7" ce="7" impl="0" cis="2" csz="2" npm="2" vars="0" varsi="0" varsnp="0" wmc="2" wmci="2" wmcnp="2">
+    <class name="UserType" fqname="App\Form\Security\UserType" start="16" end="80" loc="65" cloc="6" eloc="51" lloc="2" ncloc="59" dit="2" noam="2" nocc="0" noom="0" nom="2" cr="0.15" rcr="0.1755" ca="1" cbo="7" ce="7" impl="0" cis="2" csz="2" npm="2" vars="0" varsi="0" varsnp="0" wmc="2" wmci="2" wmcnp="2">
       <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Form\Security\UserType.php"/>
       <method name="buildForm" start="22" end="69" ccn="1" ccn2="1" loc="48" cloc="0" eloc="46" lloc="1" ncloc="48" npath="1" hnt="29" hnd="85" hv="185.87233714799" hd="4.7638888888889" hl="0.20991253644315" he="885.47516169114" ht="49.193064538396" hb="0.030737107842731" hi="39.016933745351" mi="47.705085946165"/>
       <method name="configureOptions" start="74" end="79" ccn="1" ccn2="1" loc="6" cloc="0" eloc="5" lloc="1" ncloc="6" npath="1" hnt="9" hnd="9" hv="28.529325012981" hd="6" hl="0.16666666666667" he="171.17595007788" ht="9.5097750043269" hb="0.010276389970974" hi="4.7548875021635" mi="74.428220343202"/>
     </class>
   </package>
-  <package name="App\Form\User" noc="1" noi="0" nom="2" nof="0" cr="0.15" rcr="0.181875">
-    <class name="BoxSubscribeType" fqname="App\Form\User\BoxSubscribeType" start="16" end="49" loc="34" cloc="6" eloc="22" lloc="2" ncloc="28" dit="2" noam="2" nocc="0" noom="0" nom="2" cr="0.15" rcr="0.181875" ca="1" cbo="5" ce="5" impl="0" cis="2" csz="2" npm="2" vars="0" varsi="0" varsnp="0" wmc="2" wmci="2" wmcnp="2">
+  <package name="App\Form\User" noc="1" noi="0" nom="2" nof="0" cr="0.15" rcr="0.1755">
+    <class name="BoxSubscribeType" fqname="App\Form\User\BoxSubscribeType" start="15" end="48" loc="34" cloc="6" eloc="22" lloc="2" ncloc="28" dit="2" noam="2" nocc="0" noom="0" nom="2" cr="0.15" rcr="0.1755" ca="1" cbo="5" ce="5" impl="0" cis="2" csz="2" npm="2" vars="0" varsi="0" varsnp="0" wmc="2" wmci="2" wmcnp="2">
       <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Form\User\BoxSubscribeType.php"/>
-      <method name="buildForm" start="21" end="38" ccn="1" ccn2="1" loc="18" cloc="0" eloc="17" lloc="1" ncloc="18" npath="1" hnt="20" hnd="34" hv="101.74925682501" hd="5" hl="0.2" he="508.74628412503" ht="28.263682451391" hb="0.021242856338187" hi="20.349851365001" mi="58.967768374498"/>
-      <method name="configureOptions" start="43" end="48" ccn="1" ccn2="1" loc="6" cloc="0" eloc="5" lloc="1" ncloc="6" npath="1" hnt="9" hnd="9" hv="28.529325012981" hd="6" hl="0.16666666666667" he="171.17595007788" ht="9.5097750043269" hb="0.010276389970974" hi="4.7548875021635" mi="74.428220343202"/>
+      <method name="buildForm" start="20" end="37" ccn="1" ccn2="1" loc="18" cloc="0" eloc="17" lloc="1" ncloc="18" npath="1" hnt="20" hnd="34" hv="101.74925682501" hd="5" hl="0.2" he="508.74628412503" ht="28.263682451391" hb="0.021242856338187" hi="20.349851365001" mi="58.967768374498"/>
+      <method name="configureOptions" start="42" end="47" ccn="1" ccn2="1" loc="6" cloc="0" eloc="5" lloc="1" ncloc="6" npath="1" hnt="9" hnd="9" hv="28.529325012981" hd="6" hl="0.16666666666667" he="171.17595007788" ht="9.5097750043269" hb="0.010276389970974" hi="4.7548875021635" mi="74.428220343202"/>
     </class>
   </package>
   <package name="App" noc="2" noi="0" nom="5" nof="0" cr="0.15" rcr="0.2775">
@@ -154,35 +242,93 @@
       <method name="configureContainer" start="37" end="49" ccn="1" ccn2="1" loc="13" cloc="2" eloc="9" lloc="7" ncloc="11" npath="1" hnt="24" hnd="67" hv="145.58614057099" hd="5.5714285714286" hl="0.17948717948718" he="811.12278318121" ht="45.062376843401" hb="0.028991441660569" hi="26.13084574351" mi="63.903490376816"/>
       <method name="configureRoutes" start="51" end="58" ccn="1" ccn2="1" loc="8" cloc="0" eloc="6" lloc="4" ncloc="8" npath="1" hnt="19" hnd="49" hv="106.67948703819" hd="5.8" hl="0.17241379310345" he="618.7410248215" ht="34.374501378972" hb="0.024203863042803" hi="18.393015006584" mi="68.690284424501"/>
     </class>
-    <class name="SiteConfig" fqname="App\SiteConfig" start="8" end="26" loc="19" cloc="6" eloc="0" lloc="0" ncloc="13" dit="0" noam="0" nocc="0" noom="0" nom="0" cr="0.15" rcr="0.15" ca="3" cbo="0" ce="0" impl="0" cis="0" csz="0" npm="0" vars="0" varsi="0" varsnp="0" wmc="0" wmci="0" wmcnp="0">
+    <class name="SiteConfig" fqname="App\SiteConfig" start="8" end="96" loc="89" cloc="59" eloc="0" lloc="0" ncloc="30" dit="0" noam="0" nocc="0" noom="0" nom="0" cr="0.15" rcr="0.15" ca="6" cbo="0" ce="0" impl="0" cis="0" csz="0" npm="0" vars="0" varsi="0" varsnp="0" wmc="0" wmci="0" wmcnp="0">
       <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\SiteConfig.php"/>
     </class>
   </package>
-  <package name="DoctrineMigrations" noc="2" noi="0" nom="4" nof="0" cr="0.15" rcr="0.2775">
-    <class name="Version20180312114316" fqname="DoctrineMigrations\Version20180312114316" start="11" end="28" loc="18" cloc="2" eloc="8" lloc="4" ncloc="16" dit="2" noam="2" nocc="0" noom="0" nom="2" cr="0.15" rcr="0.21375" ca="0" cbo="1" ce="1" impl="0" cis="2" csz="2" npm="2" vars="0" varsi="0" varsnp="0" wmc="2" wmci="2" wmcnp="2">
-      <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Migrations\Version20180312114316.php"/>
-      <method name="up" start="13" end="19" ccn="1" ccn2="1" loc="7" cloc="1" eloc="4" lloc="2" ncloc="6" npath="1" hnt="12" hnd="16" hv="48" hd="5" hl="0.2" he="240" ht="13.333333333333" hb="0.012873191794742" hi="9.6" mi="74.960108826396"/>
-      <method name="down" start="21" end="27" ccn="1" ccn2="1" loc="7" cloc="1" eloc="4" lloc="2" ncloc="6" npath="1" hnt="12" hnd="16" hv="48" hd="5" hl="0.2" he="240" ht="13.333333333333" hb="0.012873191794742" hi="9.6" mi="74.960108826396"/>
-    </class>
-    <class name="Version20180312154350" fqname="DoctrineMigrations\Version20180312154350" start="11" end="28" loc="18" cloc="2" eloc="8" lloc="4" ncloc="16" dit="2" noam="2" nocc="0" noom="0" nom="2" cr="0.15" rcr="0.21375" ca="0" cbo="1" ce="1" impl="0" cis="2" csz="2" npm="2" vars="0" varsi="0" varsnp="0" wmc="2" wmci="2" wmcnp="2">
-      <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Migrations\Version20180312154350.php"/>
-      <method name="up" start="13" end="19" ccn="1" ccn2="1" loc="7" cloc="1" eloc="4" lloc="2" ncloc="6" npath="1" hnt="12" hnd="16" hv="48" hd="5" hl="0.2" he="240" ht="13.333333333333" hb="0.012873191794742" hi="9.6" mi="74.960108826396"/>
-      <method name="down" start="21" end="27" ccn="1" ccn2="1" loc="7" cloc="1" eloc="4" lloc="2" ncloc="6" npath="1" hnt="12" hnd="16" hv="48" hd="5" hl="0.2" he="240" ht="13.333333333333" hb="0.012873191794742" hi="9.6" mi="74.960108826396"/>
+  <package name="DoctrineMigrations" noc="1" noi="0" nom="2" nof="0" cr="0.15" rcr="0.2775">
+    <class name="Version20180315085243" fqname="DoctrineMigrations\Version20180315085243" start="11" end="33" loc="23" cloc="2" eloc="13" lloc="9" ncloc="21" dit="2" noam="2" nocc="0" noom="0" nom="2" cr="0.15" rcr="0.2775" ca="0" cbo="1" ce="1" impl="0" cis="2" csz="2" npm="2" vars="0" varsi="0" varsnp="0" wmc="2" wmci="2" wmcnp="2">
+      <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Migrations\Version20180315085243.php"/>
+      <method name="up" start="13" end="22" ccn="1" ccn2="1" loc="10" cloc="1" eloc="7" lloc="5" ncloc="9" npath="1" hnt="15" hnd="28" hv="72.110323830864" hd="4" hl="0.25" he="288.44129532346" ht="16.024516406859" hb="0.01455181070884" hi="18.027580957716" mi="68.420836276269"/>
+      <method name="down" start="24" end="32" ccn="1" ccn2="1" loc="9" cloc="1" eloc="6" lloc="4" ncloc="8" npath="1" hnt="14" hnd="24" hv="64.189475010096" hd="4.2" hl="0.23809523809524" he="269.5957950424" ht="14.977544169022" hb="0.01391086559975" hi="15.283208335737" mi="70.235048224659"/>
     </class>
   </package>
-  <package name="App\Repository" noc="1" noi="0" nom="2" nof="0" cr="0.15" rcr="0.2775">
-    <class name="UserRepository" fqname="App\Repository\UserRepository" start="15" end="47" loc="33" cloc="7" eloc="13" lloc="5" ncloc="26" dit="2" noam="2" nocc="0" noom="0" nom="2" cr="0.15" rcr="0.2775" ca="0" cbo="2" ce="2" impl="0" cis="2" csz="3" npm="2" vars="1" varsi="1" varsnp="0" wmc="3" wmci="3" wmcnp="3">
+  <package name="App\Repository" noc="3" noi="0" nom="11" nof="0" cr="0.15" rcr="0.2775">
+    <class name="BoxRepository" fqname="App\Repository\BoxRepository" start="14" end="44" loc="31" cloc="7" eloc="13" lloc="5" ncloc="24" dit="2" noam="2" nocc="0" noom="0" nom="2" cr="0.15" rcr="0.1925" ca="0" cbo="2" ce="2" impl="0" cis="2" csz="3" npm="2" vars="1" varsi="1" varsnp="0" wmc="3" wmci="3" wmcnp="3">
+      <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Repository\BoxRepository.php"/>
+      <method name="__construct" start="23" end="26" ccn="1" ccn2="1" loc="4" cloc="0" eloc="3" lloc="1" ncloc="4" npath="1" hnt="9" hnd="9" hv="28.529325012981" hd="6" hl="0.16666666666667" he="171.17595007788" ht="9.5097750043269" hb="0.010276389970974" hi="4.7548875021635" mi="79.267620989406"/>
+      <method name="findAll" start="31" end="43" ccn="2" ccn2="2" loc="13" cloc="0" eloc="10" lloc="4" ncloc="13" npath="2" hnt="13" hnd="23" hv="58.806305428741" hd="7.5" hl="0.13333333333333" he="441.04729071556" ht="24.502627261975" hb="0.019313849860771" hi="7.8408407238322" mi="65.527500733882"/>
+    </class>
+    <class name="ProductRepository" fqname="App\Repository\ProductRepository" start="19" end="123" loc="105" cloc="20" eloc="54" lloc="28" ncloc="85" dit="2" noam="7" nocc="0" noom="0" nom="7" cr="0.15" rcr="0.1925" ca="0" cbo="8" ce="8" impl="0" cis="3" csz="10" npm="3" vars="3" varsi="3" varsnp="0" wmc="14" wmci="14" wmcnp="8">
+      <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Repository\ProductRepository.php"/>
+      <method name="__construct" start="31" end="35" ccn="1" ccn2="1" loc="5" cloc="0" eloc="4" lloc="2" ncloc="5" npath="1" hnt="12" hnd="13" hv="44.405276617693" hd="5.6" hl="0.17857142857143" he="248.66954905908" ht="13.814974947727" hb="0.013181367946259" hi="7.9295136817309" mi="75.196823487278"/>
+      <method name="findOneByIdFromProvider" start="42" end="55" ccn="4" ccn2="4" loc="14" cloc="0" eloc="11" lloc="6" ncloc="14" npath="6" hnt="16" hnd="26" hv="75.207035490257" hd="11.25" hl="0.088888888888889" he="846.0791492654" ht="47.004397181411" hb="0.029818519280417" hi="6.6850698213562" mi="63.60749924315"/>
+      <method name="findAllFromProvider" start="60" end="78" ccn="3" ccn2="3" loc="19" cloc="1" eloc="13" lloc="8" ncloc="18" npath="4" hnt="18" hnd="39" hv="95.13723993952" hd="8.0357142857143" hl="0.12444444444444" he="764.49567808543" ht="42.471982115857" hb="0.02786947376091" hi="11.839300970251" mi="61.444534451914"/>
+      <method name="getProductsFromCache" start="80" end="83" ccn="1" ccn2="1" loc="4" cloc="0" eloc="3" lloc="1" ncloc="4" npath="1" hnt="9" hnd="10" hv="29.897352853986" hd="3.75" hl="0.26666666666667" he="112.11507320245" ht="6.2286151779138" hb="0.0077503517809905" hi="7.9726274277297" mi="79.125191356207"/>
+      <method name="getProductsFromFile" start="85" end="94" ccn="2" ccn2="2" loc="10" cloc="0" eloc="8" lloc="5" ncloc="10" npath="2" hnt="21" hnd="33" hv="105.93227650653" hd="6.1071428571429" hl="0.16374269005848" he="646.94354580772" ht="35.941308100429" hb="0.024933868706001" hi="17.345635919197" mi="65.851746831431"/>
+      <method name="convertAllToProduct" start="101" end="108" ccn="2" ccn2="2" loc="8" cloc="0" eloc="7" lloc="4" ncloc="8" npath="2" hnt="13" hnd="21" hv="57.100126496124" hd="9" hl="0.11111111111111" he="513.90113846512" ht="28.550063248062" hb="0.021386110107324" hi="6.3444584995693" mi="68.996060034437"/>
+      <method name="convertToProduct" start="114" end="122" ccn="1" ccn2="1" loc="9" cloc="0" eloc="8" lloc="2" ncloc="9" npath="1" hnt="15" hnd="26" hv="70.506595772116" hd="4.7727272727273" hl="0.20952380952381" he="336.50875254874" ht="18.694930697152" hb="0.016126606476895" hi="14.772810542729" mi="67.224195590539"/>
+    </class>
+    <class name="UserRepository" fqname="App\Repository\UserRepository" start="14" end="44" loc="31" cloc="7" eloc="13" lloc="5" ncloc="24" dit="2" noam="2" nocc="0" noom="0" nom="2" cr="0.15" rcr="0.1925" ca="0" cbo="2" ce="2" impl="0" cis="2" csz="3" npm="2" vars="1" varsi="1" varsnp="0" wmc="3" wmci="3" wmcnp="3">
       <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Repository\UserRepository.php"/>
-      <method name="__construct" start="24" end="27" ccn="1" ccn2="1" loc="4" cloc="0" eloc="3" lloc="1" ncloc="4" npath="1" hnt="9" hnd="9" hv="28.529325012981" hd="6" hl="0.16666666666667" he="171.17595007788" ht="9.5097750043269" hb="0.010276389970974" hi="4.7548875021635" mi="79.267620989406"/>
-      <method name="findAll" start="32" end="44" ccn="2" ccn2="2" loc="13" cloc="0" eloc="10" lloc="4" ncloc="13" npath="2" hnt="13" hnd="23" hv="58.806305428741" hd="7.5" hl="0.13333333333333" he="441.04729071556" ht="24.502627261975" hb="0.019313849860771" hi="7.8408407238322" mi="65.527500733882"/>
+      <method name="__construct" start="23" end="26" ccn="1" ccn2="1" loc="4" cloc="0" eloc="3" lloc="1" ncloc="4" npath="1" hnt="9" hnd="9" hv="28.529325012981" hd="6" hl="0.16666666666667" he="171.17595007788" ht="9.5097750043269" hb="0.010276389970974" hi="4.7548875021635" mi="79.267620989406"/>
+      <method name="findAll" start="31" end="43" ccn="2" ccn2="2" loc="13" cloc="0" eloc="10" lloc="4" ncloc="13" npath="2" hnt="13" hnd="23" hv="58.806305428741" hd="7.5" hl="0.13333333333333" he="441.04729071556" ht="24.502627261975" hb="0.019313849860771" hi="7.8408407238322" mi="65.527500733882"/>
     </class>
   </package>
-  <package name="App\Subscriber" noc="1" noi="0" nom="3" nof="0" cr="0.15" rcr="0.2775">
-    <class name="UserSubscriber" fqname="App\Subscriber\UserSubscriber" start="14" end="71" loc="58" cloc="31" eloc="15" lloc="6" ncloc="27" dit="0" noam="0" nocc="0" noom="0" nom="3" cr="0.15" rcr="0.2775" ca="0" cbo="4" ce="4" impl="1" cis="3" csz="4" npm="3" vars="1" varsi="1" varsnp="0" wmc="4" wmci="4" wmcnp="4">
+  <package name="App\Service\Twig" noc="2" noi="0" nom="4" nof="0" cr="0.15" rcr="0.21375">
+    <class name="AppExtension" fqname="App\Service\Twig\AppExtension" start="21" end="55" loc="35" cloc="13" eloc="15" lloc="2" ncloc="22" dit="2" noam="2" nocc="0" noom="0" nom="2" cr="0.15" rcr="0.2775" ca="0" cbo="6" ce="6" impl="0" cis="2" csz="2" npm="2" vars="0" varsi="0" varsnp="0" wmc="2" wmci="2" wmcnp="2">
+      <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Service\Twig\AppExtension.php"/>
+      <method name="getFilters" start="28" end="33" ccn="1" ccn2="1" loc="6" cloc="0" eloc="5" lloc="1" ncloc="6" npath="1" hnt="12" hnd="15" hv="46.882687147302" hd="11" hl="0.090909090909091" he="515.70955862032" ht="28.650531034462" hb="0.021436252598573" hi="4.2620624679366" mi="72.917739069765"/>
+      <method name="getFunctions" start="41" end="54" ccn="1" ccn2="1" loc="14" cloc="2" eloc="10" lloc="1" ncloc="12" npath="1" hnt="18" hnd="65" hv="108.40262063451" hd="6.8333333333333" hl="0.14634146341463" he="740.7512410025" ht="41.152846722361" hb="0.027289380100175" hi="15.863798141636" mi="63.802157730463"/>
+    </class>
+    <class name="AppRuntime" fqname="App\Service\Twig\AppRuntime" start="11" end="32" loc="22" cloc="7" eloc="7" lloc="3" ncloc="15" dit="0" noam="0" nocc="0" noom="0" nom="2" cr="0.15" rcr="0.15" ca="1" cbo="1" ce="1" impl="0" cis="2" csz="3" npm="2" vars="1" varsi="1" varsnp="0" wmc="2" wmci="2" wmcnp="2">
+      <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Service\Twig\AppRuntime.php"/>
+      <method name="__construct" start="19" end="22" ccn="1" ccn2="1" loc="4" cloc="0" eloc="3" lloc="1" ncloc="4" npath="1" hnt="6" hnd="6" hv="15.509775004327" hd="4" hl="0.25" he="62.039100017308" ht="3.4466166676282" hb="0.0052238304343202" hi="3.8774437510817" mi="81.120955834208"/>
+      <method name="getUri" start="27" end="31" ccn="1" ccn2="1" loc="5" cloc="0" eloc="4" lloc="2" ncloc="5" npath="1" hnt="9" hnd="11" hv="31.134884567736" hd="8" hl="0.125" he="249.07907654189" ht="13.837726474549" hb="0.013195836014061" hi="3.891860570967" mi="76.276445128352"/>
+    </class>
+  </package>
+  <package name="App\Service\Twig\Common" noc="1" noi="0" nom="1" nof="0" cr="0.15" rcr="0.15">
+    <class name="StringAppRuntime" fqname="App\Service\Twig\Common\StringAppRuntime" start="10" end="22" loc="13" cloc="4" eloc="2" lloc="0" ncloc="9" dit="0" noam="0" nocc="0" noom="0" nom="1" cr="0.15" rcr="0.15" ca="1" cbo="0" ce="0" impl="0" cis="1" csz="1" npm="1" vars="0" varsi="0" varsnp="0" wmc="1" wmci="1" wmcnp="1">
+      <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Service\Twig\Common\StringAppRuntime.php"/>
+      <method name="__construct" start="19" end="21" ccn="1" ccn2="1" loc="3" cloc="0" eloc="2" lloc="0" ncloc="3" npath="1" hnt="2" hnd="2" hv="2" hd="2" hl="0.5" he="4" ht="0.22222222222222" hb="0.00083994736659658" hi="1" mi="91.191023588314"/>
+    </class>
+  </package>
+  <package name="App\Service\Twig\Entity" noc="2" noi="0" nom="10" nof="0" cr="0.15" rcr="0.15">
+    <class name="BoxAppRuntime" fqname="App\Service\Twig\Entity\BoxAppRuntime" start="18" end="130" loc="113" cloc="43" eloc="34" lloc="11" ncloc="70" dit="0" noam="0" nocc="0" noom="0" nom="7" cr="0.15" rcr="0.15" ca="1" cbo="4" ce="4" impl="0" cis="6" csz="9" npm="5" vars="2" varsi="2" varsnp="1" wmc="9" wmci="9" wmcnp="6">
+      <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Service\Twig\Entity\BoxAppRuntime.php"/>
+      <method name="__construct" start="46" end="50" ccn="1" ccn2="1" loc="5" cloc="0" eloc="4" lloc="2" ncloc="5" npath="1" hnt="8" hnd="10" hv="26.575424759099" hd="3" hl="0.33333333333333" he="79.726274277297" ht="4.4292374598498" hb="0.0061746601349011" hi="8.8584749196996" mi="76.757952883514"/>
+      <method name="boxLink" start="57" end="62" ccn="2" ccn2="2" loc="6" cloc="0" eloc="4" lloc="2" ncloc="6" npath="2" hnt="15" hnd="24" hv="68.774437510817" hd="5.6" hl="0.17857142857143" he="385.13685006058" ht="21.396491670032" hb="0.017645018905316" hi="12.281149555503" mi="73.731990809232"/>
+      <method name="boxImageLink" start="69" end="72" ccn="1" ccn2="1" loc="4" cloc="0" eloc="3" lloc="1" ncloc="4" npath="1" hnt="10" hnd="13" hv="37.004397181411" hd="4.8" hl="0.20833333333333" he="177.62110647077" ht="9.8678392483762" hb="0.010532750402133" hi="7.7092494127939" mi="78.476660720639"/>
+      <method name="boxImage" start="80" end="87" ccn="1" ccn2="1" loc="8" cloc="0" eloc="7" lloc="1" ncloc="8" npath="1" hnt="13" hnd="17" hv="53.137016936254" hd="6.4166666666667" hl="0.15584415584416" he="340.96252534097" ht="18.942362518943" hb="0.016268587391841" hi="8.2810935485072" mi="69.349305152427"/>
+      <method name="getBoxHref" start="94" end="97" ccn="1" ccn2="1" loc="4" cloc="0" eloc="3" lloc="1" ncloc="4" npath="1" hnt="13" hnd="15" hv="50.789577742911" hd="8" hl="0.125" he="406.31662194329" ht="22.573145663516" hb="0.018286130075594" hi="6.3486972178638" mi="77.51373499088"/>
+      <method name="boxesLink" start="105" end="115" ccn="1" ccn2="1" loc="11" cloc="0" eloc="7" lloc="1" ncloc="11" npath="1" hnt="11" hnd="13" hv="40.704836899552" hd="4.8" hl="0.20833333333333" he="195.38321711785" ht="10.854623173214" hb="0.011223722387817" hi="8.4801743540733" mi="70.159796233355"/>
+      <method name="getBoxesHref" start="122" end="129" ccn="2" ccn2="2" loc="8" cloc="0" eloc="6" lloc="3" ncloc="8" npath="2" hnt="15" hnd="20" hv="64.82892142331" hd="6.75" hl="0.14814814814815" he="437.59521960735" ht="24.310845533741" hb="0.019212938442374" hi="9.6042846553052" mi="70.070401826814"/>
+    </class>
+    <class name="WorkflowAppRuntime" fqname="App\Service\Twig\Entity\WorkflowAppRuntime" start="15" end="96" loc="82" cloc="19" eloc="39" lloc="18" ncloc="63" dit="0" noam="0" nocc="0" noom="0" nom="3" cr="0.15" rcr="0.15" ca="1" cbo="3" ce="3" impl="0" cis="3" csz="5" npm="3" vars="2" varsi="2" varsnp="0" wmc="11" wmci="11" wmcnp="11">
+      <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Service\Twig\Entity\WorkflowAppRuntime.php"/>
+      <method name="__construct" start="28" end="32" ccn="1" ccn2="1" loc="5" cloc="0" eloc="4" lloc="2" ncloc="5" npath="1" hnt="8" hnd="10" hv="26.575424759099" hd="3" hl="0.33333333333333" he="79.726274277297" ht="4.4292374598498" hb="0.0061746601349011" hi="8.8584749196996" mi="76.757952883514"/>
+      <method name="displayWorkflowNotification" start="39" end="49" ccn="1" ccn2="1" loc="11" cloc="4" eloc="3" lloc="1" ncloc="7" npath="1" hnt="7" hnd="8" hv="21" hd="7.5" hl="0.13333333333333" he="157.5" ht="8.75" hb="0.0097214814250369" hi="2.8" mi="80.199394296734"/>
+      <method name="workflowLinks" start="56" end="95" ccn="7" ccn2="9" loc="40" cloc="0" eloc="32" lloc="15" ncloc="40" npath="128" hnt="45" hnd="172" hv="334.18191396159" hd="9.9577464788732" hl="0.1004243281471" he="3327.6987770542" ht="184.87215428079" hb="0.074297593984755" hi="33.559994188505" mi="48.283224437867"/>
+    </class>
+  </package>
+  <package name="App\Subscriber" noc="2" noi="0" nom="12" nof="0" cr="0.15" rcr="0.2775">
+    <class name="UserSubscriber" fqname="App\Subscriber\UserSubscriber" start="14" end="71" loc="58" cloc="31" eloc="15" lloc="6" ncloc="27" dit="0" noam="0" nocc="0" noom="0" nom="3" cr="0.15" rcr="0.21375" ca="0" cbo="4" ce="4" impl="1" cis="3" csz="4" npm="3" vars="1" varsi="1" varsnp="0" wmc="4" wmci="4" wmcnp="4">
       <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Subscriber\UserSubscriber.php"/>
       <method name="__construct" start="26" end="29" ccn="1" ccn2="1" loc="4" cloc="0" eloc="3" lloc="1" ncloc="4" npath="1" hnt="6" hnd="6" hv="15.509775004327" hd="4" hl="0.25" he="62.039100017308" ht="3.4466166676282" hb="0.0052238304343202" hi="3.8774437510817" mi="81.120955834208"/>
       <method name="onSecurityInteractiveLogin" start="34" end="45" ccn="2" ccn2="2" loc="12" cloc="3" eloc="7" lloc="4" ncloc="9" npath="2" hnt="12" hnd="19" hv="50.975130161323" hd="7.5833333333333" hl="0.13186813186813" he="386.56140372337" ht="21.475633540187" hb="0.017688502679888" hi="6.7219951861085" mi="69.341110328577"/>
       <method name="getSubscribedEvents" start="65" end="70" ccn="1" ccn2="1" loc="6" cloc="0" eloc="5" lloc="1" ncloc="6" npath="1" hnt="9" hnd="9" hv="28.529325012981" hd="12.25" hl="0.081632653061224" he="349.48423140901" ht="19.415790633834" hb="0.016538538763157" hi="2.3289244908556" mi="74.428220343202"/>
+    </class>
+    <class name="WorkflowSubscriber" fqname="App\Subscriber\WorkflowSubscriber" start="16" end="126" loc="111" cloc="36" eloc="46" lloc="25" ncloc="75" dit="0" noam="0" nocc="0" noom="0" nom="9" cr="0.15" rcr="0.21375" ca="0" cbo="5" ce="5" impl="1" cis="8" csz="9" npm="8" vars="0" varsi="0" varsnp="0" wmc="14" wmci="14" wmcnp="13">
+      <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Subscriber\WorkflowSubscriber.php"/>
+      <method name="__construct" start="25" end="29" ccn="1" ccn2="1" loc="5" cloc="0" eloc="4" lloc="2" ncloc="5" npath="1" hnt="8" hnd="10" hv="26.575424759099" hd="3" hl="0.33333333333333" he="79.726274277297" ht="4.4292374598498" hb="0.0061746601349011" hi="8.8584749196996" mi="76.757952883514"/>
+      <method name="onTransition" start="34" end="59" ccn="6" ccn2="6" loc="26" cloc="0" eloc="20" lloc="17" ncloc="26" npath="5" hnt="21" hnd="53" hv="120.28632954583" hd="7.7777777777778" hl="0.12857142857143" he="935.56034091199" ht="51.975574495111" hb="0.031885503621667" hi="15.465385227321" mi="56.246659223145"/>
+      <method name="providerMailOk" start="65" end="68" ccn="1" ccn2="1" loc="4" cloc="0" eloc="3" lloc="1" ncloc="4" npath="1" hnt="11" hnd="14" hv="41.880904142634" hd="3.3333333333333" hl="0.3" he="139.60301380878" ht="7.7557229893766" hb="0.0089703338808269" hi="12.56427124279" mi="78.100213482666"/>
+      <method name="managerMailOk" start="73" end="76" ccn="1" ccn2="1" loc="4" cloc="0" eloc="3" lloc="1" ncloc="4" npath="1" hnt="11" hnd="14" hv="41.880904142634" hd="3.3333333333333" hl="0.3" he="139.60301380878" ht="7.7557229893766" hb="0.0089703338808269" hi="12.56427124279" mi="78.100213482666"/>
+      <method name="userMailok" start="81" end="87" ccn="1" ccn2="1" loc="7" cloc="4" eloc="2" lloc="0" ncloc="3" npath="1" hnt="2" hnd="2" hv="2" hd="2" hl="0.5" he="4" ht="0.22222222222222" hb="0.00083994736659658" hi="1" mi="91.191023588314"/>
+      <method name="marketingMailCancel" start="92" end="95" ccn="1" ccn2="1" loc="4" cloc="0" eloc="3" lloc="1" ncloc="4" npath="1" hnt="10" hnd="14" hv="38.073549220576" hd="3.3333333333333" hl="0.3" he="126.91183073525" ht="7.0506572630696" hb="0.0084180884492565" hi="11.422064766173" mi="78.390045608386"/>
+      <method name="providerMailCancel" start="100" end="103" ccn="1" ccn2="1" loc="4" cloc="0" eloc="3" lloc="1" ncloc="4" npath="1" hnt="11" hnd="14" hv="41.880904142634" hd="3.3333333333333" hl="0.3" he="139.60301380878" ht="7.7557229893766" hb="0.0089703338808269" hi="12.56427124279" mi="78.100213482666"/>
+      <method name="sendMail" start="111" end="115" ccn="1" ccn2="1" loc="5" cloc="1" eloc="3" lloc="1" ncloc="4" npath="1" hnt="16" hnd="22" hv="71.350905898197" hd="3.6" hl="0.27777777777778" he="256.86326123351" ht="14.270181179639" hb="0.013469353161074" hi="19.819696082832" mi="76.480063575195"/>
+      <method name="getSubscribedEvents" start="120" end="125" ccn="1" ccn2="1" loc="6" cloc="0" eloc="5" lloc="1" ncloc="6" npath="1" hnt="10" hnd="10" hv="33.219280948874" hd="16" hl="0.0625" he="531.50849518198" ht="29.528249732332" hb="0.021871851680476" hi="2.0762050593046" mi="73.965396159465"/>
     </class>
   </package>
 </metrics>

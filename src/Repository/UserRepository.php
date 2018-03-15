@@ -28,9 +28,9 @@ class UserRepository extends ServiceEntityRepository
     /**
      * @return array
      */
-    public function findAll(): array
+    public function findAll(bool $forceBase=false): array
     {
-        if ($this->allUser) {
+        if ($this->allUser || $forceBase) {
             return $this->allUser;
         }
 

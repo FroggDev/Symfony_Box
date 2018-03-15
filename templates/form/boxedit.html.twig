@@ -8,8 +8,17 @@
 
     <div class="row" id="productDiv">
         <div>
+
+            {% if app.request.query.get('error')=='price'  %}
+                <div class="alert alert-danger">
+                    <p class="text-center"><i class="fa fa-thumbs-down fa-2x" aria-hidden="true"></i></p>
+                    <p class="text-center">Cannot validate the box<br/>Box max price is exceded !</p>
+                </div>
+            {% endif %}
+
             <h2 class="text-center">SutekinaBox Edition</h2>
             <h4 class="text-center"><a href="#" id="boxProductsSwitcher">Click here to toggle view</a></h4>
+
 
             <center>
             <div class="linkDiv">
@@ -198,7 +207,7 @@
                 price+=parseFloat(elem.attr('price'));
                 prodList+=elem.attr('product')+',';
             });
-            price===0 ? totalPrice.html('') : totalPrice.html('(Total price : '+price+' )');
+            price===0 ? totalPrice.html('') : totalPrice.html('(Total price : '+price+' / {{ constant('App\\SiteConfig::MAXPRICE') }})');
             el.className += ' ex-moved';
             products.val(prodList);
 

@@ -2,7 +2,6 @@
 
 namespace App\Repository;
 
-
 use App\Entity\Product;
 use App\SiteConfig;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
@@ -121,5 +120,4 @@ class ProductRepository extends ServiceEntityRepository
             ->setDescription($tmpProduct['description'])
             ->setPrice($tmpProduct['price']);
     }
-
 }

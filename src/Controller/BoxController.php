@@ -125,7 +125,6 @@ class BoxController extends Controller
 
         # Apply search filter
         if ($search == "atwork") {
-
             $boxes = $tmpboxes;
 
             //externalized for more options
@@ -142,7 +141,6 @@ class BoxController extends Controller
                 }
             );
             */
-
         }
 
         # get number of elenmts
@@ -159,7 +157,8 @@ class BoxController extends Controller
             'boxes' => $boxes,
             'currentPage' => $currentPage,
             'countPagination' => $countPagination,
-            'countBox' => count($tmpboxes)
+            'countBox' => count($tmpboxes),
+            'search' => $search
         ]);
     }
 
@@ -217,7 +216,6 @@ class BoxController extends Controller
             # END PRODUCTS
             ###
 
-
             ###
             # IMAGE
             ###
@@ -250,13 +248,16 @@ class BoxController extends Controller
             # ENDIMAGE
             ###
 
-            # insert into database
-            try{
-            $eManager = $this->getDoctrine()->getManager();
-            $eManager->persist($box);
-            $eManager->flush();
+            if ($box->getPrice()>SiteConfig::MAXPRICE) {
+                return $this->redirectToRoute('box_edit', ['id' => $box->getId(),'error' =>'price']);
             }
-            catch(\Exception $e){
+
+            # insert into database
+            try {
+                $eManager = $this->getDoctrine()->getManager();
+                $eManager->persist($box);
+                $eManager->flush();
+            } catch (\Exception $e) {
                 /**
                  * @TODO : FIX THE PERSIST CASCADE BUG !
                  */
@@ -277,12 +278,14 @@ class BoxController extends Controller
 
 
         # Display form view
-        return $this->render('form/boxedit.html.twig',
+        return $this->render(
+            'form/boxedit.html.twig',
             [
                 'form' => $form->createView(),
                 'products' => $products,
                 'boxproducts' => $boxProducts
-            ]);
+            ]
+        );
     }
 
     /**
@@ -297,8 +300,7 @@ class BoxController extends Controller
 
         foreach ($boxes as $box) {
             $workflow = $workflows->get($box);
-            if (
-                ($workflow->can($box, 'product_request')) ||
+            if (($workflow->can($box, 'product_request')) ||
                 ($workflow->can($box, 'marketing_approval')) ||
                 ($workflow->can($box, 'manager_approval'))) {
                 $tmpBoxes[] = $box;

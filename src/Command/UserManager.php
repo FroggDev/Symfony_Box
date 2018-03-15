@@ -139,7 +139,7 @@ class UserManager extends Command
         $display = [];
 
         # GET USER INFOS
-        $userList = $this->eManager->getRepository(User::class)->findAll();
+        $userList = $this->eManager->getRepository(User::class)->findAll(true);
 
         # PREPARE USERS INFOS
         foreach ($userList as $user) {

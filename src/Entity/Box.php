@@ -206,4 +206,19 @@ class Box
         $this->description = $description;
         return $this;
     }
+
+
+    /**
+     * @return float
+     */
+    public function getPrice() : float
+    {
+        $price = 0;
+
+        foreach ($this->products as $product) {
+            $price += $product->getPrice();
+        }
+
+        return $price;
+    }
 }

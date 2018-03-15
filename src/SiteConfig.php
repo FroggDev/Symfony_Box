@@ -87,4 +87,10 @@ class SiteConfig
      * @const string
      */
     const PRODUCTCACHEFILE = 'cache-products.php';
+
+    /**
+     * Price maximum of the box products
+     * @const float
+     */
+    const MAXPRICE = 60;
 }
