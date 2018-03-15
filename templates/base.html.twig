@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}{% endblock %}</title>
+        <title>{% block page_title %}{% endblock %} | {{ constant('App\\SiteConfig::SITENAME') }}</title>
         {% block stylesheets %}{% endblock %}
     </head>
     <body>

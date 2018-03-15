@@ -3,6 +3,7 @@ namespace App\Form\Admin;
 
 use App\Entity\Box;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\CollectionType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
@@ -35,7 +36,6 @@ class BoxCreateType extends AbstractType
                 'required' => true,
                 'attr' => [
                     'placeholder' => 'Description...',
-                    'class' => 'form-control'
                 ]
             ]
         )->add(
@@ -54,7 +54,7 @@ class BoxCreateType extends AbstractType
             'submit',
             SubmitType::class,
             [
-                'label' => 'Edit',
+                'label' => 'Confirm',
                 'attr' => array('class' => 'btn btn-block btn-primary')
             ]
         )->getForm();

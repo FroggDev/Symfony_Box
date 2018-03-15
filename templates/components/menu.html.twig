@@ -10,33 +10,18 @@
 </header>
 <!--menu-->
 <nav class="menu font-heading">
+
     <ul>
-        <li {% if active == 'index' %}class="current"{% endif %}><a href="{{ path('index') }}">Home</a></li>
-
-        {% if is_granted('IS_AUTHENTICATED_FULLY') %}
-
-        {% if is_granted('ROLE_MARKETING')%}
-            <li {% if active == 'box_edit' %}class="current"{% endif %}><a href="{{ path('box_edit') }}">Box Creation</a></li>
-        {% endif %}
-
-        {% if is_granted('ROLE_MANAGER') %}
-            <!-- TODO -->
-        {% endif %}
-
-        {% if is_granted('ROLE_MEMBER') %}
-            <li {% if active == 'box_subscribe' %}class="current"{% endif %}><a href="{{ path('box_subscribe') }}">Box Subscription</a></li>
-        {% endif %}
-
-        <li style="float: right;">
-            <a href="{{ path('security_logout') }}">Logout</a>
-        </li>
-
+        {% if is_granted('IS_AUTHENTICATED_FULLY') and (is_granted('ROLE_MARKETING') or is_granted('ROLE_MANAGER') or is_granted('ROLE_ADMIN')) %}
+            {{ include('components/menuadmin.html.twig') }}
+        {% else %}
+            {{ include('components/menuuser.html.twig') }}
         {% endif %}
     </ul>
 
     <div class="userstatus">
         {% if is_granted('IS_AUTHENTICATED_FULLY') %}
-            Welcome {{ app.user.firstname }} {{ app.user.lastname }} <b>{{ app.user.getRoles | join('+') }}</b>{{ displayWorkflowNotification }}
+            Welcome {{ app.user.firstname }} {{ app.user.lastname }} <b>{{ app.user.getRoles | join('+') }}</b>
         {% endif %}
     </div>
 

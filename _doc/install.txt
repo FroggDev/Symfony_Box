@@ -90,3 +90,8 @@ php bin/console debug:router
 - pour gerer les utilisateurs à partir de la console :
 php bin/console app:userManager
 
+- pour charger le cache
+php bin/console cache:warmup
+
+- pour decharger le cache :
+php bin/console cache:clear

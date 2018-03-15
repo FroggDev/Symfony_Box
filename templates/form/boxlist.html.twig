@@ -5,12 +5,12 @@
 
         {% if boxes is  empty %}
             <div class="alert alert-danger">
-                <strong>No box available.</strong>
+                <strong>No box available for your criteria..</strong>
             </div>
         {% else %}
 
             <div class="box-caption">
-                <span>Box List</span>
+                <span>Box List {% if countBox>0 %}( <a title="filter only my work !" href="{{ path('index_admin', {'search': 'atwork'}) }}">{{ countBox }} <i class="fa fa-flag fa-1x" aria-hidden="true"></i></a> ){% endif %}</span>
 
                 <div class="search-box" style="float: right;">
                     <input type="text" placeholder="search box..." onkeypress="return searchFunction(event)"/>

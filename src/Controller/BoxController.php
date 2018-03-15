@@ -1,8 +1,10 @@
 <?php
+
 namespace App\Controller;
 
 use App\Common\Traits\MailerTrait;
 use App\Entity\Box;
+use App\Entity\Product;
 use App\Form\Admin\BoxCreateType;
 use App\Form\User\BoxSubscribeType;
 use App\SiteConfig;
@@ -28,7 +30,7 @@ class BoxController extends Controller
      */
     public function __construct(\Swift_Mailer $mailer)
     {
-        $this->mailer=$mailer;
+        $this->mailer = $mailer;
     }
 
     /**
@@ -42,7 +44,7 @@ class BoxController extends Controller
     public function boxSubscribe(Request $request): Response
     {
 
-        # New user registration
+        # Get user
         $user = $this->getUser();
 
         # create the user form
@@ -83,10 +85,9 @@ class BoxController extends Controller
         ]);
     }
 
-
     /**
      * @Route(
-     *     "/admin/index/{search}/{currentPage}.html",
+     *     "/admin/{search}/{currentPage}.html",
      *      name="index_admin",
      *      requirements={"currentPage" : "\d+"},
      *      defaults={"currentPage"="1","search"="fulllist"},
@@ -94,7 +95,7 @@ class BoxController extends Controller
      * )
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function indexAdmin(string $currentPage, string $search): Response
+    public function boxList(Registry $workflows, string $currentPage, string $search): Response
     {
 
         # FROM DOCTRINE
@@ -104,8 +105,11 @@ class BoxController extends Controller
         # get category from category
         $boxes = $repositoryBox->findAll();
 
+        $tmpboxes = $this->getMyBoxes($workflows, $boxes);
+
+
         # Apply search filter
-        if ($search!="fulllist") {
+        if ($search != "fulllist" && $search != "atwork") {
             # search in array
             $boxes = array_filter(
                 $boxes,
@@ -119,20 +123,43 @@ class BoxController extends Controller
             );
         }
 
+        # Apply search filter
+        if ($search == "atwork") {
+
+            $boxes = $tmpboxes;
+
+            //externalized for more options
+            /*
+            # search in array
+            $boxes = array_filter(
+                $boxes,
+                function (Box $box) use ($workflows) {
+                    $workflow = $workflows->get($box);
+                    return
+                     ($workflow->can($box, 'product_request')) ||
+                     ($workflow->can($box, 'marketing_approval')) ||
+                     ($workflow->can($box, 'manager_approval'));
+                }
+            );
+            */
+
+        }
+
         # get number of elenmts
-        $countBox =count($boxes);
+        $countBox = count($boxes);
 
         # get only wanted articles
-        $boxes = array_slice($boxes, ($currentPage-1) * SiteConfig::NBBOXPERPAGE, SiteConfig::NBBOXPERPAGE);
+        $boxes = array_slice($boxes, ($currentPage - 1) * SiteConfig::NBBOXPERPAGE, SiteConfig::NBBOXPERPAGE);
 
         # number of pagination
-        $countPagination =  ceil($countBox / SiteConfig::NBBOXPERPAGE);
+        $countPagination = ceil($countBox / SiteConfig::NBBOXPERPAGE);
 
         # display page from twig template
         return $this->render('user/admin.html.twig', [
             'boxes' => $boxes,
             'currentPage' => $currentPage,
-            'countPagination' => $countPagination
+            'countPagination' => $countPagination,
+            'countBox' => count($tmpboxes)
         ]);
     }
 
@@ -151,7 +178,7 @@ class BoxController extends Controller
         $box = $this
             ->getDoctrine()
             ->getRepository(Box::class)
-            ->findOneBy(['id'=>$id]);
+            ->findOneBy(['id' => $id]);
 
         if ($box) {
             $featuredImageSave = $box->getFeaturedImage();
@@ -169,6 +196,31 @@ class BoxController extends Controller
             # get datas
             $box = $form->getData();
 
+
+            ###
+            # PRODUCTS
+            ###
+            # FROM DOCTRINE
+            # get repo category
+            $repositoryProduct = $this->getDoctrine()->getRepository(Product::class);
+            # Recover products ID
+            $products = [];
+            $productIds = explode(',', filter_input(INPUT_POST, 'products'));
+            foreach ($productIds as $id) {
+                $tmp = $repositoryProduct->findOneByIdFromProvider(intval($id));
+                if ($tmp) {
+                    $products[] = $tmp;
+                }
+            }
+            $box->setProducts($products);
+            ###
+            # END PRODUCTS
+            ###
+
+
+            ###
+            # IMAGE
+            ###
             # get the image file
             $featuredImage = $box->getFeaturedImage();
 
@@ -194,19 +246,75 @@ class BoxController extends Controller
                     $box->setFeaturedImage($featuredImageSave);
                 }
             }
+            ###
+            # ENDIMAGE
+            ###
 
             # insert into database
+            try{
             $eManager = $this->getDoctrine()->getManager();
             $eManager->persist($box);
             $eManager->flush();
+            }
+            catch(\Exception $e){
+                /**
+                 * @TODO : FIX THE PERSIST CASCADE BUG !
+                 */
+
+                VarDumper::dump($e);
+            }
 
             # redirect user
-            return $this->redirectToRoute('box_workflow', ['id'=>$box->getId()]);
+            return $this->redirectToRoute('box_workflow', ['id' => $box->getId()]);
         }
 
+        # get repo category
+        $repositoryProduct = $this->getDoctrine()->getRepository(Product::class);
+
+        # get products and box products
+        $boxProducts = $box ? $box->getProducts()->getValues() : [];
+        $products = array_udiff($repositoryProduct->findAllFromProvider(), $boxProducts, 'Self::compareProducts');
+
+
         # Display form view
-        return $this->render('form/boxedit.html.twig', [
-            'form' => $form->createView()
-        ]);
+        return $this->render('form/boxedit.html.twig',
+            [
+                'form' => $form->createView(),
+                'products' => $products,
+                'boxproducts' => $boxProducts
+            ]);
+    }
+
+    /**
+     * @param Registry $workflows
+     * @param array $boxes
+     * @return array
+     */
+    private function getMyBoxes(Registry $workflows, array $boxes)
+    {
+
+        $tmpBoxes = [];
+
+        foreach ($boxes as $box) {
+            $workflow = $workflows->get($box);
+            if (
+                ($workflow->can($box, 'product_request')) ||
+                ($workflow->can($box, 'marketing_approval')) ||
+                ($workflow->can($box, 'manager_approval'))) {
+                $tmpBoxes[] = $box;
+            }
+        }
+
+        return $tmpBoxes;
+    }
+
+    /**
+     * @param $products1
+     * @param $products2
+     * @return mixed
+     */
+    private function compareProducts($products1, $products2)
+    {
+        return $products1->getId() - $products2->getId();
     }
 }

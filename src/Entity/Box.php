@@ -3,6 +3,9 @@ namespace App\Entity;
 
 use App\Common\Traits\String\SlugifyTrait;
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\ORM\Mapping\JoinColumn;
+use Doctrine\ORM\Mapping\JoinTable;
+use Doctrine\ORM\Mapping\ManyToMany;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
@@ -52,7 +55,12 @@ class Box
     private $description;
 
     /**
-     * @TODO
+     * Many Users have Many Groups.
+     * @ManyToMany(targetEntity="App\Entity\Product", inversedBy="products",cascade={"all"})
+     * @JoinTable(name="products_boxes",
+     *      joinColumns={@JoinColumn(name="box_id", referencedColumnName="id")},
+     *      inverseJoinColumns={@JoinColumn(name="product_id", referencedColumnName="id")}
+     *      )
      */
     private $products;
 
