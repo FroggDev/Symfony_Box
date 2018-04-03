@@ -109,7 +109,7 @@ class BoxAppRuntime
         string $search = null
     ): string {
         return $this->getATag(
-            $this->getBoxesHref($currentPage,$search),
+            $this->getBoxesHref($currentPage, $search),
             $text,
             $class
         );
@@ -120,16 +120,16 @@ class BoxAppRuntime
      * @param string|null $currentPage
      * @return string
      */
-    private function getBoxesHref(string $currentPage = null,string $search = null) : string
+    private function getBoxesHref(string $currentPage = null, string $search = null) : string
     {
         if ($currentPage) {
             $routeParams['currentPage'] = $currentPage;
         }
 
-        if($search){
+        if ($search) {
             $routeParams['search'] = $search;
         }
 
-        return $this->router->generate('index_admin', $routeParams );
+        return $this->router->generate('index_admin', $routeParams);
     }
 }

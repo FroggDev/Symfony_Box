@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Repository;
 
 use App\Entity\User;
@@ -26,9 +25,10 @@ class UserRepository extends ServiceEntityRepository
     }
 
     /**
+     * @param bool $forceBase
      * @return array
      */
-    public function findAll(bool $forceBase=false): array
+    public function findAll(bool $forceBase = false): array
     {
         if ($this->allUser || $forceBase) {
             return $this->allUser;

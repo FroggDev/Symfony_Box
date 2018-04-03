@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<metrics generated="2018-03-15T09:23:58" pdepend="@package_version@" ahh="0.94736842105263" andc="0" calls="355" ccn="252" ccn2="262" cloc="1290" clsa="0" clsc="29" eloc="1775" fanout="114" leafs="20" lloc="970" loc="3609" maxDIT="2" ncloc="2319" noc="29" nof="0" noi="0" nom="152" nop="18" roots="9">
+<metrics generated="2018-03-21T11:03:34" pdepend="@package_version@" ahh="0.94736842105263" andc="0" calls="355" ccn="253" ccn2="264" cloc="1291" clsa="0" clsc="29" eloc="1779" fanout="114" leafs="20" lloc="971" loc="3614" maxDIT="2" ncloc="2323" noc="29" nof="0" noi="0" nom="152" nop="18" roots="9">
   <files>
     <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Cache\ProductCacheWarmer.php" loc="52" cloc="20" eloc="25" lloc="13" ncloc="32"/>
     <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Command\UserManager.php" loc="306" cloc="89" eloc="168" lloc="111" ncloc="217"/>
@@ -8,7 +8,7 @@
     <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Common\Traits\MailerTrait.php" loc="63" cloc="29" eloc="27" lloc="9" ncloc="34"/>
     <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Common\Traits\String\MaxLengthTrait.php" loc="28" cloc="10" eloc="14" lloc="7" ncloc="18"/>
     <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Common\Traits\String\SlugifyTrait.php" loc="40" cloc="14" eloc="18" lloc="11" ncloc="26"/>
-    <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Controller\BoxController.php" loc="323" cloc="116" eloc="151" lloc="90" ncloc="207"/>
+    <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Controller\BoxController.php" loc="323" cloc="117" eloc="151" lloc="89" ncloc="206"/>
     <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Controller\IndexController.php" loc="73" cloc="56" eloc="14" lloc="8" ncloc="17"/>
     <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Controller\LoggedController.php" loc="68" cloc="23" eloc="37" lloc="28" ncloc="45"/>
     <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Controller\LoginController.php" loc="314" cloc="110" eloc="149" lloc="94" ncloc="204"/>
@@ -31,7 +31,7 @@
     <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Service\Twig\AppExtension.php" loc="56" cloc="20" eloc="30" lloc="13" ncloc="36"/>
     <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Service\Twig\AppRuntime.php" loc="33" cloc="11" eloc="17" lloc="9" ncloc="22"/>
     <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Service\Twig\Common\StringAppRuntime.php" loc="23" cloc="8" eloc="10" lloc="4" ncloc="15"/>
-    <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Service\Twig\Entity\BoxAppRuntime.php" loc="131" cloc="47" eloc="62" lloc="32" ncloc="84"/>
+    <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Service\Twig\Entity\BoxAppRuntime.php" loc="136" cloc="47" eloc="66" lloc="34" ncloc="89"/>
     <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Service\Twig\Entity\WorkflowAppRuntime.php" loc="97" cloc="23" eloc="54" lloc="29" ncloc="74"/>
     <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Subscriber\UserSubscriber.php" loc="72" cloc="35" eloc="29" lloc="16" ncloc="37"/>
     <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Subscriber\WorkflowSubscriber.php" loc="127" cloc="40" eloc="67" lloc="42" ncloc="87"/>
@@ -84,12 +84,12 @@
     </trait>
   </package>
   <package name="App\Controller" noc="5" noi="0" nom="17" nof="0" cr="0.15" rcr="0.2775">
-    <class name="BoxController" fqname="App\Controller\BoxController" start="22" end="322" loc="301" cloc="112" eloc="127" lloc="70" ncloc="189" dit="2" noam="6" nocc="0" noom="0" nom="6" cr="0.15" rcr="0.1755" ca="0" cbo="11" ce="11" impl="0" cis="4" csz="6" npm="4" vars="0" varsi="0" varsnp="0" wmc="27" wmci="27" wmcnp="21">
+    <class name="BoxController" fqname="App\Controller\BoxController" start="22" end="322" loc="301" cloc="113" eloc="127" lloc="69" ncloc="188" dit="2" noam="6" nocc="0" noom="0" nom="6" cr="0.15" rcr="0.1755" ca="0" cbo="11" ce="11" impl="0" cis="4" csz="6" npm="4" vars="0" varsi="0" varsnp="0" wmc="27" wmci="27" wmcnp="21">
       <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Controller\BoxController.php"/>
       <method name="__construct" start="31" end="34" ccn="1" ccn2="1" loc="4" cloc="0" eloc="3" lloc="1" ncloc="4" npath="1" hnt="6" hnd="6" hv="15.509775004327" hd="4" hl="0.25" he="62.039100017308" ht="3.4466166676282" hb="0.0052238304343202" hi="3.8774437510817" mi="81.120955834208"/>
       <method name="boxSubscribe" start="44" end="86" ccn="3" ccn2="4" loc="43" cloc="12" eloc="20" lloc="13" ncloc="31" npath="4" hnt="44" hnd="94" hv="288.40190947382" hd="10.013513513514" hl="0.099865047233468" he="2887.9164178392" ht="160.43980099106" hb="0.067598204154455" hi="28.801270311825" mi="53.856427503866"/>
-      <method name="boxList" start="98" end="162" ccn="3" ccn2="5" loc="65" cloc="24" eloc="29" lloc="13" ncloc="41" npath="6" hnt="48" hnd="125" hv="334.35764566378" hd="12.22641509434" hl="0.08179012345679" he="4087.9953658515" ht="227.11085365842" hb="0.085222121616665" hi="27.347153117562" mi="49.752227622046"/>
-      <method name="boxEdit" start="173" end="289" ccn="10" ccn2="11" loc="117" cloc="35" eloc="60" lloc="36" ncloc="82" npath="152" hnt="83" hnd="240" hv="656.27191943551" hd="14.742268041237" hl="0.067832167832168" he="9674.9365442554" ht="537.49647468086" hb="0.15134828197934" hi="44.516346982688" mi="40.006682442784"/>
+      <method name="boxList" start="98" end="163" ccn="3" ccn2="5" loc="66" cloc="24" eloc="30" lloc="13" ncloc="42" npath="6" hnt="48" hnd="125" hv="334.35764566378" hd="12.22641509434" hl="0.08179012345679" he="4087.9953658515" ht="227.11085365842" hb="0.085222121616665" hi="27.347153117562" mi="49.752227622046"/>
+      <method name="boxEdit" start="174" end="289" ccn="10" ccn2="11" loc="116" cloc="36" eloc="59" lloc="35" ncloc="80" npath="152" hnt="83" hnd="240" hv="656.27191943551" hd="14.742268041237" hl="0.067832167832168" he="9674.9365442554" ht="537.49647468086" hb="0.15134828197934" hi="44.516346982688" mi="40.006682442784"/>
       <method name="getMyBoxes" start="296" end="311" ccn="3" ccn2="5" loc="16" cloc="0" eloc="12" lloc="6" ncloc="16" npath="5" hnt="21" hnd="47" hv="116.64636588523" hd="9.6666666666667" hl="0.10344827586207" he="1127.5815368906" ht="62.643418716142" hb="0.036111377005479" hi="12.066865436403" mi="61.314005078805"/>
       <method name="compareProducts" start="318" end="321" ccn="1" ccn2="1" loc="4" cloc="0" eloc="3" lloc="1" ncloc="4" npath="1" hnt="8" hnd="9" hv="25.359400011539" hd="10.5" hl="0.095238095238095" he="266.27370012115" ht="14.792983340064" hb="0.013796351820766" hi="2.4151809534799" mi="79.625791624151"/>
     </class>
@@ -269,10 +269,10 @@
       <method name="convertAllToProduct" start="101" end="108" ccn="2" ccn2="2" loc="8" cloc="0" eloc="7" lloc="4" ncloc="8" npath="2" hnt="13" hnd="21" hv="57.100126496124" hd="9" hl="0.11111111111111" he="513.90113846512" ht="28.550063248062" hb="0.021386110107324" hi="6.3444584995693" mi="68.996060034437"/>
       <method name="convertToProduct" start="114" end="122" ccn="1" ccn2="1" loc="9" cloc="0" eloc="8" lloc="2" ncloc="9" npath="1" hnt="15" hnd="26" hv="70.506595772116" hd="4.7727272727273" hl="0.20952380952381" he="336.50875254874" ht="18.694930697152" hb="0.016126606476895" hi="14.772810542729" mi="67.224195590539"/>
     </class>
-    <class name="UserRepository" fqname="App\Repository\UserRepository" start="14" end="44" loc="31" cloc="7" eloc="13" lloc="5" ncloc="24" dit="2" noam="2" nocc="0" noom="0" nom="2" cr="0.15" rcr="0.1925" ca="0" cbo="2" ce="2" impl="0" cis="2" csz="3" npm="2" vars="1" varsi="1" varsnp="0" wmc="3" wmci="3" wmcnp="3">
+    <class name="UserRepository" fqname="App\Repository\UserRepository" start="14" end="44" loc="31" cloc="7" eloc="13" lloc="5" ncloc="24" dit="2" noam="2" nocc="0" noom="0" nom="2" cr="0.15" rcr="0.1925" ca="0" cbo="2" ce="2" impl="0" cis="2" csz="3" npm="2" vars="1" varsi="1" varsnp="0" wmc="4" wmci="4" wmcnp="4">
       <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Repository\UserRepository.php"/>
       <method name="__construct" start="23" end="26" ccn="1" ccn2="1" loc="4" cloc="0" eloc="3" lloc="1" ncloc="4" npath="1" hnt="9" hnd="9" hv="28.529325012981" hd="6" hl="0.16666666666667" he="171.17595007788" ht="9.5097750043269" hb="0.010276389970974" hi="4.7548875021635" mi="79.267620989406"/>
-      <method name="findAll" start="31" end="43" ccn="2" ccn2="2" loc="13" cloc="0" eloc="10" lloc="4" ncloc="13" npath="2" hnt="13" hnd="23" hv="58.806305428741" hd="7.5" hl="0.13333333333333" he="441.04729071556" ht="24.502627261975" hb="0.019313849860771" hi="7.8408407238322" mi="65.527500733882"/>
+      <method name="findAll" start="31" end="43" ccn="2" ccn2="3" loc="13" cloc="0" eloc="10" lloc="4" ncloc="13" npath="3" hnt="13" hnd="23" hv="58.806305428741" hd="7.5" hl="0.13333333333333" he="441.04729071556" ht="24.502627261975" hb="0.019313849860771" hi="7.8408407238322" mi="65.527500733882"/>
     </class>
   </package>
   <package name="App\Service\Twig" noc="2" noi="0" nom="4" nof="0" cr="0.15" rcr="0.21375">
@@ -294,15 +294,15 @@
     </class>
   </package>
   <package name="App\Service\Twig\Entity" noc="2" noi="0" nom="10" nof="0" cr="0.15" rcr="0.15">
-    <class name="BoxAppRuntime" fqname="App\Service\Twig\Entity\BoxAppRuntime" start="18" end="130" loc="113" cloc="43" eloc="34" lloc="11" ncloc="70" dit="0" noam="0" nocc="0" noom="0" nom="7" cr="0.15" rcr="0.15" ca="1" cbo="4" ce="4" impl="0" cis="6" csz="9" npm="5" vars="2" varsi="2" varsnp="1" wmc="9" wmci="9" wmcnp="6">
+    <class name="BoxAppRuntime" fqname="App\Service\Twig\Entity\BoxAppRuntime" start="18" end="135" loc="118" cloc="43" eloc="37" lloc="13" ncloc="75" dit="0" noam="0" nocc="0" noom="0" nom="7" cr="0.15" rcr="0.15" ca="1" cbo="4" ce="4" impl="0" cis="6" csz="9" npm="5" vars="2" varsi="2" varsnp="1" wmc="10" wmci="10" wmcnp="6">
       <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Service\Twig\Entity\BoxAppRuntime.php"/>
       <method name="__construct" start="46" end="50" ccn="1" ccn2="1" loc="5" cloc="0" eloc="4" lloc="2" ncloc="5" npath="1" hnt="8" hnd="10" hv="26.575424759099" hd="3" hl="0.33333333333333" he="79.726274277297" ht="4.4292374598498" hb="0.0061746601349011" hi="8.8584749196996" mi="76.757952883514"/>
       <method name="boxLink" start="57" end="62" ccn="2" ccn2="2" loc="6" cloc="0" eloc="4" lloc="2" ncloc="6" npath="2" hnt="15" hnd="24" hv="68.774437510817" hd="5.6" hl="0.17857142857143" he="385.13685006058" ht="21.396491670032" hb="0.017645018905316" hi="12.281149555503" mi="73.731990809232"/>
       <method name="boxImageLink" start="69" end="72" ccn="1" ccn2="1" loc="4" cloc="0" eloc="3" lloc="1" ncloc="4" npath="1" hnt="10" hnd="13" hv="37.004397181411" hd="4.8" hl="0.20833333333333" he="177.62110647077" ht="9.8678392483762" hb="0.010532750402133" hi="7.7092494127939" mi="78.476660720639"/>
       <method name="boxImage" start="80" end="87" ccn="1" ccn2="1" loc="8" cloc="0" eloc="7" lloc="1" ncloc="8" npath="1" hnt="13" hnd="17" hv="53.137016936254" hd="6.4166666666667" hl="0.15584415584416" he="340.96252534097" ht="18.942362518943" hb="0.016268587391841" hi="8.2810935485072" mi="69.349305152427"/>
       <method name="getBoxHref" start="94" end="97" ccn="1" ccn2="1" loc="4" cloc="0" eloc="3" lloc="1" ncloc="4" npath="1" hnt="13" hnd="15" hv="50.789577742911" hd="8" hl="0.125" he="406.31662194329" ht="22.573145663516" hb="0.018286130075594" hi="6.3486972178638" mi="77.51373499088"/>
-      <method name="boxesLink" start="105" end="115" ccn="1" ccn2="1" loc="11" cloc="0" eloc="7" lloc="1" ncloc="11" npath="1" hnt="11" hnd="13" hv="40.704836899552" hd="4.8" hl="0.20833333333333" he="195.38321711785" ht="10.854623173214" hb="0.011223722387817" hi="8.4801743540733" mi="70.159796233355"/>
-      <method name="getBoxesHref" start="122" end="129" ccn="2" ccn2="2" loc="8" cloc="0" eloc="6" lloc="3" ncloc="8" npath="2" hnt="15" hnd="20" hv="64.82892142331" hd="6.75" hl="0.14814814814815" he="437.59521960735" ht="24.310845533741" hb="0.019212938442374" hi="9.6042846553052" mi="70.070401826814"/>
+      <method name="boxesLink" start="105" end="116" ccn="1" ccn2="1" loc="12" cloc="0" eloc="7" lloc="1" ncloc="12" npath="1" hnt="11" hnd="13" hv="40.704836899552" hd="4.8" hl="0.20833333333333" he="195.38321711785" ht="10.854623173214" hb="0.011223722387817" hi="8.4801743540733" mi="70.159796233355"/>
+      <method name="getBoxesHref" start="123" end="134" ccn="3" ccn2="3" loc="12" cloc="0" eloc="9" lloc="5" ncloc="12" npath="4" hnt="15" hnd="20" hv="64.82892142331" hd="6.75" hl="0.14814814814815" he="437.59521960735" ht="24.310845533741" hb="0.019212938442374" hi="9.6042846553052" mi="70.070401826814"/>
     </class>
     <class name="WorkflowAppRuntime" fqname="App\Service\Twig\Entity\WorkflowAppRuntime" start="15" end="96" loc="82" cloc="19" eloc="39" lloc="18" ncloc="63" dit="0" noam="0" nocc="0" noom="0" nom="3" cr="0.15" rcr="0.15" ca="1" cbo="3" ce="3" impl="0" cis="3" csz="5" npm="3" vars="2" varsi="2" varsnp="0" wmc="11" wmci="11" wmcnp="11">
       <file name="C:\Users\Etudiant\Desktop\Symfony_Box\src\Service\Twig\Entity\WorkflowAppRuntime.php"/>

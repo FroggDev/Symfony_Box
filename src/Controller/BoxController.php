@@ -69,7 +69,13 @@ class BoxController extends Controller
             $eManager->flush();
 
             # send the mail
-            $this->send(SiteConfig::SITEEMAIL, $user->getEmail(), 'mail/box' . $type . '.html.twig', SiteConfig::SITENAME . ' - Validation mail', $user);
+            $this->send(
+                SiteConfig::SITEEMAIL,
+                $user->getEmail(),
+                'mail/box' . $type . '.html.twig',
+                SiteConfig::SITENAME . ' - Validation mail',
+                $user
+            );
 
             /**
              * TODO send to MARKETING A NEW USER HAS UN/SUBSCRIBE !
@@ -224,7 +230,7 @@ class BoxController extends Controller
 
             # Only if image exist
             if ($featuredImage) {
-                VarDumper::dump("PASSING HERE ???");
+                //VarDumper::dump("PASSING HERE ???");
 
                 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                 # get file name DO NOT FORGET TO ENABLE extension=php_fileinfo.dll
@@ -248,8 +254,8 @@ class BoxController extends Controller
             # ENDIMAGE
             ###
 
-            if ($box->getPrice()>SiteConfig::MAXPRICE) {
-                return $this->redirectToRoute('box_edit', ['id' => $box->getId(),'error' =>'price']);
+            if ($box->getPrice() > SiteConfig::MAXPRICE) {
+                return $this->redirectToRoute('box_edit', ['id' => $box->getId(), 'error' => 'price']);
             }
 
             # insert into database
@@ -310,12 +316,13 @@ class BoxController extends Controller
         return $tmpBoxes;
     }
 
+
     /**
-     * @param $products1
-     * @param $products2
-     * @return mixed
+     * @param Product $products1
+     * @param Product $products2
+     * @return int
      */
-    private function compareProducts($products1, $products2)
+    private function compareProducts(Product $products1, Product $products2)
     {
         return $products1->getId() - $products2->getId();
     }
